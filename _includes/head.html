@@ -1,0 +1,23 @@
+<!-- Meta tags -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="{{ description or 'Сайт летнего лагеря' }}">
+
+<!-- Open Graph -->
+<meta property="og:title" content="{{ title or 'Летний лагерь' }}">
+<meta property="og:description" content="{{ description or 'Сайт летнего лагеря' }}">
+{% if og_image %}
+<meta property="og:image" content="{{ og_image }}">
+{% endif %}
+{% if canonical_url %}
+<meta property="og:url" content="{{ canonical_url }}">
+{% endif %}
+<meta property="og:type" content="website">
+
+<!-- Canonical URL -->
+{% if canonical_url %}
+<link rel="canonical" href="{{ canonical_url }}">
+{% endif %}
+
+<!-- CSS -->
+<link rel="stylesheet" href="/assets/css/style.css">

@@ -5,54 +5,46 @@
 
 ## Что делает
 
-Статические лендинги для каждого продукта (летний лагерь, курсы и т.д.).
-Захватывают UTM-параметры из Яндекс.Директа, передают пользователя
-в Telegram-бот через Deep Link с product_id и UTM.
+Статический frontend-модуль проекта.
+Хранит лендинги и связанные с ними frontend-ресурсы для текущих продуктов.
 
-## Стек
+## Роль в текущем проекте
 
-```
-HTML5 + Tailwind CSS (собранный, не CDN)
+- принимает пользовательский трафик на страницы продуктов;
+- хранит product-specific frontend-контент;
+- передаёт пользователя в соседние части системы через интеграционный контракт, описанный в проектной документации.
+
+## Стек текущего проекта
+
+```text
+HTML5
+Tailwind CSS
 Vanilla JS
-GitHub Pages (хостинг)
-Яндекс.Метрика (аналитика)
+GitHub Pages
+Яндекс.Метрика
 ```
 
-## Хостинг
+## Ключевые project-specific файлы
 
-GitHub Pages. Деплой: GitHub Actions при push в main.
-URL: https://<org>.github.io/<repo>/
-
-## Репозиторий
-
-https://github.com/<org>/github-pages-repo
-
-## Ключевые файлы
-
-```
-shared/js/bot-link-builder.js   — строит Deep Link для кнопок
-shared/js/utm-handler.js        — сохраняет UTM в sessionStorage
-products/<id>/index.html        — лендинг продукта
-products/<id>/_context.md       — контекст конкретного продукта
+```text
+shared/js/bot-link-builder.js
+shared/js/utm-handler.js
+products/<id>/index.html
+products/<id>/_context.md
 ```
 
-## Зависит от
+## Текущие зависимости и связи
 
-- Яндекс.Метрика (счётчик задаётся в каждом index.html)
-- `_bot/` — через контракт Deep Link (должны совпадать product_id)
+- использует проектные frontend-ресурсы и конфигурацию продуктов;
+- зависит от project-specific интеграционного контракта с соседним модулем;
+- использует analytics и deployment flow, описанные в `docs/*.md`.
 
-## Влияет на
+## Где искать project-specific детали
 
-- `_bot/` — через Deep Link: если изменить формат ссылки, бот получит неверный payload
+- архитектура проекта: `docs/system_architecture.md`
+- frontend и SEO: `docs/seo_and_frontend_strategy.md`
+- архитектура сайта: `docs/site_architecture_11ty.md`
 
-## Контракт с ботом
+## Где искать reusable policy
 
-```
-Формат Deep Link: https://t.me/<botUsername>?start=<product_id>__<utm_source>__<utm_campaign>
-Источник product_id: window.PRODUCT_CONFIG.productId в index.html каждого продукта
-Соответствие: productId ДОЛЖЕН совпадать с ключом в _bot/products/
-```
-
-## Правила зоны
-
-Подробно: `agents/zones/site.md`
+Универсальные operational rules для статического frontend находятся в `agents/zones/frontend_static.md`.

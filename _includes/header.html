@@ -1,11 +1,11 @@
 <header class="site-header{% if product_id == 'summer_camp_2025' %} site-header--summer-camp{% endif %}">
   <div class="container">
     <nav class="main-nav">
-      <a href="/" class="logo">Летний лагерь</a>
+      <a href="{{ '/' | url }}" class="logo">Летний лагерь</a>
       <ul class="nav-links">
-        <li><a href="/#summer-camp-program">Программа</a></li>
-        <li><a href="/#summer-camp-pricing-title">Стоимость</a></li>
-        <li><a href="/#summer-camp-faq-title">Вопросы</a></li>
+        <li><a href="{{ '/#summer-camp-program' | url }}">Программа</a></li>
+        <li><a href="{{ '/#summer-camp-pricing-title' | url }}">Стоимость</a></li>
+        <li><a href="{{ '/#summer-camp-faq-title' | url }}">Вопросы</a></li>
       </ul>
     </nav>
   </div>

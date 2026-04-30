@@ -1,7 +1,270 @@
 ---
 layout: default
 ---
+{% if product_id == "summer_camp_2025" %}
+<div class="sc-page">
+<section class="sc-page__surface" aria-label="Премиальный лендинг Dream Camp">
+  <section class="sc-hero" aria-labelledby="summer-camp-hero-title">
+    <div class="sc-hero__ambient sc-hero__ambient--sun" data-parallax-bg data-parallax-speed="0.08"></div>
+    <div class="sc-hero__ambient sc-hero__ambient--mint" data-parallax-bg data-parallax-speed="0.05"></div>
+    <div class="container sc-hero__grid">
+      <div class="sc-hero__content" data-reveal>
+        <p class="sc-eyebrow">Летняя смена 2025 • дети 7–14 лет</p>
+        <h1 id="summer-camp-hero-title">Лето, после которого ребёнок возвращается смелее, ярче и счастливее</h1>
+        <p class="sc-hero__lead">Dream Camp соединяет творчество, спорт, технологии и заботливых наставников в формате премиального детского приключения.</p>
+        <div class="sc-hero__actions" aria-label="Основные действия">
+          <a class="sc-button sc-button--primary" href="https://t.me/{{ bot_username | default: 'YourTelegramBot' }}" data-product-id="{{ product_id }}">Забронировать место</a>
+          <a class="sc-button sc-button--ghost" href="#summer-camp-program">Смотреть программу</a>
+        </div>
+        <dl class="sc-hero__metrics" aria-label="Ключевые показатели лагеря">
+          <div>
+            <dt>15</dt>
+            <dd>мест осталось</dd>
+          </div>
+          <div>
+            <dt>5:1</dt>
+            <dd>детей на наставника</dd>
+          </div>
+          <div>
+            <dt>4.9</dt>
+            <dd>оценка родителей</dd>
+          </div>
+        </dl>
+      </div>
 
+      <div class="sc-hero__visual" aria-label="Фотографии атмосферы Dream Camp" data-reveal data-parallax-content data-parallax-speed="0.16">
+        <div class="sc-photo-card sc-photo-card--main">
+          <img src="/assets/images/WhatsApp%20Image%202026-04-20%20at%2008.47.06.jpeg" width="1200" height="1600" alt="Дети на летней программе Dream Camp во время активности" fetchpriority="high">
+          <span>Живые эмоции каждый день</span>
+        </div>
+        <div class="sc-photo-card sc-photo-card--small sc-photo-card--top">
+          <img src="/assets/images/WhatsApp%20Image%202026-04-20%20at%2008.46.23%20(1).jpeg" width="1200" height="1600" alt="Командная атмосфера летнего лагеря Dream Camp">
+        </div>
+        <div class="sc-photo-card sc-photo-card--small sc-photo-card--bottom">
+          <img src="/assets/images/WhatsApp%20Image%202026-04-20%20at%2008.46.16%20(1).jpeg" width="1200" height="1600" alt="Творческая и игровая программа для детей в лагере">
+        </div>
+        <div class="sc-glass-note">
+          <strong>Безопасно</strong>
+          <span>родительский чат, наставники и ежедневные фотоотчёты</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sc-section sc-trust" aria-labelledby="summer-camp-trust-title">
+    <div class="container">
+      <div class="sc-section__intro sc-section__intro--center" data-reveal>
+        <p class="sc-eyebrow">Почему Dream Camp</p>
+        <h2 id="summer-camp-trust-title">Среда, где дети раскрываются спокойно и ярко</h2>
+      </div>
+      <div class="sc-trust__grid">
+        <article class="sc-trust-card" data-reveal>
+          <span>01</span>
+          <h3>Премиальная среда без давления</h3>
+          <p>Дети пробуют новое через игру, проекты и командные челленджи — без скучных лекций и гонки за оценками.</p>
+        </article>
+        <article class="sc-trust-card" data-reveal>
+          <span>02</span>
+          <h3>Наставники рядом</h3>
+          <p>Малые группы, бережная адаптация и понятная коммуникация с родителями на каждом этапе смены.</p>
+        </article>
+        <article class="sc-trust-card" data-reveal>
+          <span>03</span>
+          <h3>Фотоистории вместо обещаний</h3>
+          <p>Каждый день наполнен активностями, которые хочется пересматривать: мастерские, спорт, сцена и друзья.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="sc-section sc-story" aria-labelledby="summer-camp-story-title">
+    <div class="container sc-story__grid">
+      <div class="sc-section__intro" data-reveal>
+        <p class="sc-eyebrow">Знакомая ситуация?</p>
+        <h2 id="summer-camp-story-title">Лето может быть больше, чем экран и фраза «мне скучно»</h2>
+        <p>Мы забираем на себя самое сложное: насыщенный день, новые друзья, безопасность и тот самый восторг, с которым ребёнок сам просится утром на программу.</p>
+      </div>
+      <div class="sc-story__cards" data-reveal>
+        <article>
+          <h3>Было</h3>
+          <ul>
+            <li>Телефон и бесконечная скука дома</li>
+            <li>Случайные кружки без вовлечения</li>
+            <li>Мало движения, общения и ярких воспоминаний</li>
+          </ul>
+        </article>
+        <article class="is-highlighted">
+          <h3>Станет</h3>
+          <ul>
+            <li>Команда друзей и наставников</li>
+            <li>Творчество, спорт и технологии каждый день</li>
+            <li>Истории, которыми ребёнок гордится</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="sc-section sc-program" id="summer-camp-program" aria-labelledby="summer-camp-program-title">
+    <div class="container">
+      <div class="sc-section__intro sc-section__intro--center" data-reveal>
+        <p class="sc-eyebrow">Программа</p>
+        <h2 id="summer-camp-program-title">Один день — сразу несколько миров для развития</h2>
+        <p>Каждый блок собран как маленькое приключение: ребёнок пробует, делает руками, выступает, двигается и видит результат.</p>
+      </div>
+      <div class="sc-program__grid">
+        <article class="sc-program-card" data-reveal>
+          <img src="/assets/images/WhatsApp%20Image%202026-04-20%20at%2008.46.21.jpeg" width="1200" height="1600" alt="Дети участвуют в творческом занятии летнего лагеря">
+          <div>
+            <span>Творчество</span>
+            <h3>Мастерские и сцена</h3>
+            <p>Живопись, керамика, театр, музыка и фотоистории — ребёнок создаёт, а не просто смотрит.</p>
+          </div>
+        </article>
+        <article class="sc-program-card" data-reveal>
+          <img src="/assets/images/WhatsApp%20Image%202026-04-20%20at%2008.46.20.jpeg" width="1200" height="1600" alt="Активные игры и командные задания в Dream Camp">
+          <div>
+            <span>Движение</span>
+            <h3>Спорт и приключения</h3>
+            <p>Командные игры, квесты, прогулки и активность на свежем воздухе без принуждения.</p>
+          </div>
+        </article>
+        <article class="sc-program-card" data-reveal>
+          <img src="/assets/images/WhatsApp%20Image%202026-04-20%20at%2008.46.19.jpeg" width="1200" height="1600" alt="Командная работа детей на программе летнего лагеря">
+          <div>
+            <span>Будущее</span>
+            <h3>Технологии и проекты</h3>
+            <p>Робототехника, программирование, 3D и проектные задания, которые развивают уверенность.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="sc-section sc-gallery" aria-labelledby="summer-camp-gallery-title">
+    <div class="container">
+      <div class="sc-section__intro" data-reveal>
+        <p class="sc-eyebrow">Атмосфера</p>
+        <h2 id="summer-camp-gallery-title">Фото, которые помогают почувствовать лето</h2>
+      </div>
+      <div class="sc-image-rail" data-reveal>
+        <img src="/assets/images/WhatsApp%20Image%202026-04-20%20at%2008.46.17.jpeg" width="1200" height="1600" alt="Участники Dream Camp на летней активности">
+        <img src="/assets/images/WhatsApp%20Image%202026-04-20%20at%2008.46.23%20(2).jpeg" width="1200" height="1600" alt="Детская команда на программе Dream Camp">
+        <img src="/assets/images/WhatsApp%20Image%202026-04-20%20at%2008.47.05.jpeg" width="1200" height="1600" alt="Яркий момент летнего лагеря Dream Camp">
+        <img src="/assets/images/WhatsApp%20Image%202026-04-20%20at%2008.46.18.jpeg" width="1200" height="1600" alt="Дети общаются и участвуют в занятии лагеря">
+      </div>
+    </div>
+  </section>
+
+  <section class="sc-section sc-pricing" aria-labelledby="summer-camp-pricing-title">
+    <div class="container">
+      <div class="sc-section__intro sc-section__intro--center" data-reveal>
+        <p class="sc-eyebrow">Пакеты участия</p>
+        <h2 id="summer-camp-pricing-title">Выберите формат летнего приключения</h2>
+        <p>Прозрачная стоимость, понятное наполнение и быстрый переход к бронированию через Telegram.</p>
+      </div>
+      <div class="sc-pricing__grid">
+        <article class="sc-price-card" data-reveal>
+          <p class="sc-price-card__label">Базовый</p>
+          <h3>5 дней погружения</h3>
+          <p class="sc-price">15 000 ₽</p>
+          <ul>
+            <li>Проживание и 5-разовое питание</li>
+            <li>Творческие материалы и спорт</li>
+            <li>Наставники и фотоотчёт</li>
+          </ul>
+          <a class="sc-button sc-button--secondary" href="https://t.me/{{ bot_username | default: 'YourTelegramBot' }}" data-product-id="{{ product_id }}">Выбрать базовый</a>
+        </article>
+        <article class="sc-price-card sc-price-card--featured" data-reveal>
+          <p class="sc-price-card__badge">Популярный выбор</p>
+          <p class="sc-price-card__label">Премиум</p>
+          <h3>10 дней максимума</h3>
+          <p class="sc-price">25 000 ₽</p>
+          <ul>
+            <li>Всё из базового пакета</li>
+            <li>Индивидуальные занятия и ментор</li>
+            <li>Трансфер, сертификат и набор участника</li>
+          </ul>
+          <a class="sc-button sc-button--primary" href="https://t.me/{{ bot_username | default: 'YourTelegramBot' }}" data-product-id="{{ product_id }}">Забронировать премиум</a>
+        </article>
+        <article class="sc-price-card" data-reveal>
+          <p class="sc-price-card__label">Семейный</p>
+          <h3>Для двух детей</h3>
+          <p class="sc-price">40 000 ₽</p>
+          <ul>
+            <li>Экономия 5 000 ₽</li>
+            <li>Совместные мероприятия</li>
+            <li>Семейная фотосессия</li>
+          </ul>
+          <a class="sc-button sc-button--secondary" href="https://t.me/{{ bot_username | default: 'YourTelegramBot' }}" data-product-id="{{ product_id }}">Выбрать семейный</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="sc-section sc-reviews" aria-labelledby="summer-camp-reviews-title">
+    <div class="container">
+      <div class="sc-section__intro" data-reveal>
+        <p class="sc-eyebrow">Отзывы</p>
+        <h2 id="summer-camp-reviews-title">Родители замечают главное — ребёнок возвращается другим</h2>
+      </div>
+      <div class="sc-reviews__grid">
+        <blockquote data-reveal>
+          <p>«Сын вернулся с горящими глазами. Научился программировать, нашёл друзей и теперь спрашивает, когда следующая смена».</p>
+          <cite>Анна М., мама Артёма, 12 лет</cite>
+        </blockquote>
+        <blockquote data-reveal>
+          <p>«Очень сильная организация и педагоги. Дочь стала увереннее, выступила на сцене и перестала бояться новых компаний».</p>
+          <cite>Сергей К., папа Маши, 10 лет</cite>
+        </blockquote>
+        <blockquote data-reveal>
+          <p>«Каждый вечер были фото и понятная связь с наставниками. Для родителей это спокойствие, для детей — настоящее лето».</p>
+          <cite>Елена П., мама Софии, 9 лет</cite>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <section class="sc-section sc-faq" aria-labelledby="summer-camp-faq-title">
+    <div class="container sc-faq__grid">
+      <div class="sc-section__intro" data-reveal>
+        <p class="sc-eyebrow">FAQ</p>
+        <h2 id="summer-camp-faq-title">Ответы на частые вопросы</h2>
+        <p>Если нужен быстрый ответ по датам, местам или оплате — напишите в Telegram, мы поможем выбрать формат.</p>
+        <a class="sc-button sc-button--primary" href="https://t.me/{{ bot_username | default: 'YourTelegramBot' }}" data-product-id="{{ product_id }}">Задать вопрос</a>
+      </div>
+      <div class="sc-faq__items" data-reveal>
+        <details>
+          <summary>Как записаться в лагерь?</summary>
+          <p>Нажмите на любую кнопку бронирования: Telegram-бот сохранит продукт и UTM-метки, затем поможет выбрать даты и оставить заявку.</p>
+        </details>
+        <details>
+          <summary>Какой возраст детей?</summary>
+          <p>Мы принимаем детей 7–14 лет и формируем группы по возрасту, чтобы каждому было комфортно общаться и участвовать.</p>
+        </details>
+        <details>
+          <summary>Что включено в стоимость?</summary>
+          <p>Проживание, питание, материалы, занятия, спортивные мероприятия, наставники и фотоотчёты. Точный состав зависит от пакета.</p>
+        </details>
+        <details>
+          <summary>Как обеспечивается безопасность?</summary>
+          <p>Малые группы, проверенные педагоги, медицинская поддержка, ежедневная коммуникация с родителями и понятные правила территории.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="sc-final" aria-labelledby="summer-camp-final-title">
+    <div class="container sc-final__card" data-reveal>
+      <p class="sc-eyebrow">Финальный шаг</p>
+      <h2 id="summer-camp-final-title">Подарите ребёнку лето, которое он будет пересказывать весь год</h2>
+      <p>Оставьте заявку в Telegram — бот передаст продукт и рекламные метки без изменения существующего deep-link контракта.</p>
+      <a class="sc-button sc-button--primary" href="https://t.me/{{ bot_username | default: 'YourTelegramBot' }}" data-product-id="{{ product_id }}">Забронировать место сейчас</a>
+    </div>
+  </section>
+</section>
+</div>
+{% else %}
 <section class="block block-hero">
   <div class="container">
     {{ content }}
@@ -134,4 +397,4 @@ layout: default
     </details>
   </div>
 </section>
-
+{% endif %}

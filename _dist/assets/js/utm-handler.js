@@ -72,8 +72,9 @@ export class UTMHandler {
   }
 }
 
-// Инициализация при загрузке страницы
+// Задача: TASK-008
 document.addEventListener('DOMContentLoaded', () => {
   const utmHandler = new UTMHandler();
   utmHandler.saveUTMParams();
+  window.utmHandler = utmHandler;
 });

@@ -351,7 +351,6 @@ main {
   font-weight: 500;
 }
 
-/* FAQ */
 .block-faq details {
   background: var(--white);
   padding: 1.5rem;
@@ -621,6 +620,15 @@ main {
   background: #fff7ed;
   color: #162016;
   overflow-x: hidden;
+  scrollbar-color: #ff7a1a #fff2dc;
+}
+
+.sc-page::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #ff7a1a 0%, #d7f45a 100%);
+}
+
+.sc-page::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #ff8f3d 0%, #ff7a1a 100%);
 }
 
 .sc-page__surface {
@@ -640,8 +648,9 @@ main {
   position: relative;
   overflow: clip;
   background:
-    radial-gradient(circle at calc(9% + var(--sc-pointer-x, 0px) * -0.018) calc(8% + var(--sc-pointer-y, 0px) * -0.014), rgba(255, 122, 26, 0.22), transparent 28rem),
-    radial-gradient(circle at calc(91% + var(--sc-pointer-x, 0px) * 0.016) calc(18% + var(--sc-pointer-y, 0px) * 0.012), rgba(136, 240, 197, 0.22), transparent 28rem),
+    radial-gradient(circle at calc(9% + var(--sc-pointer-x, 0px) * -0.028 + var(--sc-ambient-a, 0px)) calc(8% + var(--sc-pointer-y, 0px) * -0.024 + var(--sc-scroll-glow, 0px)), rgba(255, 122, 26, 0.28), transparent 30rem),
+    radial-gradient(circle at calc(91% + var(--sc-pointer-x, 0px) * 0.026 - var(--sc-ambient-a, 0px)) calc(18% + var(--sc-pointer-y, 0px) * 0.02 + var(--sc-ambient-b, 0px)), rgba(136, 240, 197, 0.26), transparent 30rem),
+    radial-gradient(circle at calc(48% + var(--sc-pointer-x, 0px) * 0.012) calc(58% + var(--sc-ambient-b, 0px)), rgba(215, 244, 90, 0.16), transparent 24rem),
     linear-gradient(180deg, #fff8eb 0%, #fffdf7 42%, #f7fbef 100%);
 }
 
@@ -667,7 +676,6 @@ main {
   content: '';
   position: absolute;
   inset: 1.5rem;
-  border: 1px solid rgba(20, 33, 24, 0.08);
   border-radius: 42px;
   pointer-events: none;
 }
@@ -676,10 +684,10 @@ main {
   position: absolute;
   border-radius: 999px;
   filter: blur(2px);
-  opacity: 0.78;
+  opacity: 0.9;
   z-index: -1;
-  transform: translate3d(var(--sc-parallax-x, 0px), var(--sc-parallax-y, 0px), 0);
-  animation: scAmbientDrift 18s ease-in-out infinite;
+  transform: translate3d(var(--sc-parallax-x, 0px), var(--sc-parallax-y, 0px), 0) scale(var(--sc-ambient-scale, 1));
+  animation: scAmbientDrift 14s ease-in-out infinite;
   will-change: transform;
 }
 
@@ -702,13 +710,16 @@ main {
 
 @keyframes scAmbientDrift {
   0%, 100% {
+    translate: 0 0;
     scale: 1;
   }
-  45% {
-    scale: 1.08;
+  38% {
+    translate: 18px -22px;
+    scale: 1.1;
   }
   70% {
-    scale: 0.96;
+    translate: -14px 16px;
+    scale: 0.97;
   }
 }
 
@@ -1014,7 +1025,7 @@ main {
   background: rgba(255, 255, 255, 0.68);
   box-shadow: var(--sc-shadow);
   backdrop-filter: blur(18px);
-  transition: transform 260ms ease, box-shadow 260ms ease, border-color 260ms ease;
+  transition: transform 260ms ease, box-shadow 260ms ease, border-color 260ms ease, background 260ms ease;
 }
 
 .sc-trust-card {
@@ -1023,11 +1034,7 @@ main {
   border-radius: 30px;
 }
 
-.sc-trust-card:hover,
 .sc-story__cards article:hover,
-.sc-program-card:hover,
-.sc-price-card:hover,
-.sc-reviews blockquote:hover,
 .sc-faq details:hover,
 .sc-hero__metrics div:hover,
 .sc-glass-note:hover {
@@ -1127,11 +1134,6 @@ main {
   aspect-ratio: 4 / 3;
   max-height: clamp(220px, 30vh, 330px);
   object-fit: cover;
-  transition: transform 320ms ease;
-}
-
-.sc-program-card:hover img {
-  transform: scale(1.055);
 }
 
 .sc-program-card div {
@@ -1190,17 +1192,23 @@ main {
   border-radius: 34px;
 }
 
-.sc-price-card--featured {
-  background: linear-gradient(160deg, #192418 0%, #27371f 55%, #ff7a1a 170%);
-  color: #ffffff;
+.sc-price-card--one {
+  background: linear-gradient(155deg, rgba(255, 255, 255, 0.78), rgba(255, 242, 220, 0.86));
+}
+
+.sc-price-card--two {
+  background: linear-gradient(155deg, rgba(255, 236, 199, 0.88), rgba(255, 197, 120, 0.78));
+}
+
+.sc-price-card--three {
+  background: linear-gradient(155deg, #fff1cf 0%, #ffb25f 52%, #ff7a1a 118%);
+  border-color: rgba(255, 122, 26, 0.36);
+  box-shadow: 0 30px 90px rgba(255, 122, 26, 0.24), var(--sc-shadow);
   transform: translateY(-1rem);
 }
 
-.sc-price-card--featured h3,
-.sc-price-card--featured .sc-price,
-.sc-price-card--featured li,
-.sc-price-card--featured .sc-price-card__label {
-  color: #ffffff;
+.sc-price-card--three .sc-button--primary {
+  background: linear-gradient(135deg, #142118 0%, #25351f 54%, #ff7a1a 120%);
 }
 
 .sc-price-card__badge {
@@ -1250,12 +1258,28 @@ main {
   line-height: 0.7;
 }
 
-.sc-reviews cite {
-  display: block;
-  margin-top: 1rem;
+.sc-review-author {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  margin: 0.3rem 0 1rem;
+}
+
+.sc-review-author img {
+  width: 3.25rem;
+  height: 3.25rem;
+  flex: 0 0 auto;
+  border: 3px solid rgba(255, 255, 255, 0.88);
+  border-radius: 999px;
+  object-fit: cover;
+  box-shadow: 0 12px 28px rgba(62, 42, 8, 0.16);
+}
+
+.sc-review-author cite {
   color: var(--sc-ink);
   font-style: normal;
   font-weight: 850;
+  line-height: 1.25;
 }
 
 .sc-faq__grid {
@@ -1343,6 +1367,22 @@ main {
   transform: translateY(0);
 }
 
+.sc-interactive-card:hover,
+.sc-interactive-card:focus-within {
+  transform: translateY(-10px) scale(1.035);
+  border-color: rgba(255, 122, 26, 0.28);
+  box-shadow: var(--sc-shadow-strong);
+}
+
+.sc-price-card--three.is-visible {
+  transform: translateY(-1rem);
+}
+
+.sc-price-card--three.sc-interactive-card:hover,
+.sc-price-card--three.sc-interactive-card:focus-within {
+  transform: translateY(calc(-1rem - 10px)) scale(1.035);
+}
+
 @media (prefers-reduced-motion: reduce) {
   [data-reveal],
   .sc-button,
@@ -1350,6 +1390,7 @@ main {
   .sc-story__cards article,
   .sc-program-card,
   .sc-price-card,
+  .sc-interactive-card,
   .sc-reviews blockquote,
   .sc-faq details,
   .sc-hero__metrics div,
@@ -1369,6 +1410,9 @@ main {
   .sc-page__surface {
     --sc-pointer-x: 0px;
     --sc-pointer-y: 0px;
+    --sc-scroll-glow: 0px;
+    --sc-ambient-a: 0px;
+    --sc-ambient-b: 0px;
   }
 }
 
@@ -1394,7 +1438,8 @@ main {
     grid-template-columns: 1fr;
   }
 
-  .sc-price-card--featured {
+  .sc-price-card--three,
+  .sc-price-card--three.is-visible {
     transform: none;
   }
 

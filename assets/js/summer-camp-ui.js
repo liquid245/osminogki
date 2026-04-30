@@ -31,37 +31,37 @@ document.addEventListener('DOMContentLoaded', () => {
   let pointerX = 0;
   let pointerY = 0;
   let scrollY = window.scrollY;
-  let frameRequested = false;
+  const ambientStart = window.performance.now();
 
-  const renderMotion = () => {
-    frameRequested = false;
+  const renderMotion = (timestamp = window.performance.now()) => {
+    const elapsed = (timestamp - ambientStart) / 1000;
+    const ambientA = Math.sin(elapsed * 0.42) * 18;
+    const ambientB = Math.cos(elapsed * 0.31) * 22;
+    const scrollGlow = Math.min(scrollY * 0.08, 140);
+
     page.style.setProperty('--sc-pointer-x', `${pointerX}px`);
     page.style.setProperty('--sc-pointer-y', `${pointerY}px`);
+    page.style.setProperty('--sc-scroll-glow', `${scrollGlow}px`);
+    page.style.setProperty('--sc-ambient-a', `${ambientA}px`);
+    page.style.setProperty('--sc-ambient-b', `${ambientB}px`);
 
     parallaxItems.forEach((item) => {
       const speed = Number.parseFloat(item.dataset.parallaxSpeed || '0.08');
-      item.style.setProperty('--sc-parallax-x', `${pointerX * speed}px`);
-      item.style.setProperty('--sc-parallax-y', `${(scrollY * speed * -1) + (pointerY * speed)}px`);
+      item.style.setProperty('--sc-parallax-x', `${(pointerX * speed) + (ambientA * speed * 1.8)}px`);
+      item.style.setProperty('--sc-parallax-y', `${(scrollY * speed * -1.35) + (pointerY * speed) + (ambientB * speed * 1.8)}px`);
     });
-  };
 
-  const requestMotionFrame = () => {
-    if (!frameRequested) {
-      frameRequested = true;
-      window.requestAnimationFrame(renderMotion);
-    }
+    window.requestAnimationFrame(renderMotion);
   };
 
   window.addEventListener('pointermove', (event) => {
     pointerX = event.clientX - window.innerWidth / 2;
     pointerY = event.clientY - window.innerHeight / 2;
-    requestMotionFrame();
   }, { passive: true });
 
   window.addEventListener('scroll', () => {
     scrollY = window.scrollY;
-    requestMotionFrame();
   }, { passive: true });
 
-  renderMotion();
+  window.requestAnimationFrame(renderMotion);
 });

@@ -617,7 +617,17 @@ main {
   background: #142118;
 }
 
-.site-footer--summer-camp .footer-section h3,
+@media (max-width: 768px) {
+  .site-footer--summer-camp .footer-content {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+}
+
+.site-footer--summer-camp .footer-section h3 {
+  color: #ffd18c;
+}
+
 .site-footer--summer-camp .footer-section a {
   background: linear-gradient(135deg, #fff8eb 0%, #ffb45f 42%, #ff7a1a 100%);
   -webkit-background-clip: text;
@@ -646,6 +656,12 @@ main {
 
 .sc-page::-webkit-scrollbar-thumb:hover {
   background: linear-gradient(180deg, #25351f 0%, #ff7a1a 100%);
+}
+
+#summer-camp-program,
+#summer-camp-pricing,
+#summer-camp-faq {
+  scroll-margin-top: 5rem;
 }
 
 .sc-page__surface {
@@ -1225,23 +1241,12 @@ main {
   background: linear-gradient(155deg, #fff1cf 0%, #ffb25f 52%, #ff7a1a 118%);
   border-color: rgba(255, 122, 26, 0.36);
   box-shadow: 0 30px 90px rgba(255, 122, 26, 0.24), var(--sc-shadow);
-  transform: translateY(-1rem);
 }
 
 .sc-price-card--three .sc-button--primary {
   background: linear-gradient(135deg, #142118 0%, #25351f 54%, #ff7a1a 120%);
 }
 
-.sc-price-card__badge {
-  width: fit-content;
-  margin: 0 0 1rem;
-  padding: 0.45rem 0.75rem;
-  border-radius: 999px;
-  background: var(--sc-lime);
-  color: #1b250e !important;
-  font-size: 0.8rem !important;
-  font-weight: 950;
-}
 
 .sc-price {
   margin: 0.8rem 0 1.1rem;
@@ -1395,14 +1400,6 @@ main {
   box-shadow: var(--sc-shadow-strong);
 }
 
-.sc-price-card--three.is-visible {
-  transform: translateY(-1rem);
-}
-
-.sc-price-card--three.sc-interactive-card:hover,
-.sc-price-card--three.sc-interactive-card:focus-within {
-  transform: translateY(calc(-1rem - 10px)) scale(1.035);
-}
 
 @media (prefers-reduced-motion: reduce) {
   [data-reveal],

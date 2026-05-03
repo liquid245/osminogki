@@ -31,7 +31,13 @@
   <div class="container">
     <nav class="main-nav">
       <a href="/osminogki/" class="logo">Летний лагерь</a>
-      <ul class="nav-links">
+      <button class="sc-nav-toggle" type="button" aria-controls="main-nav-links" aria-expanded="false">
+        <span class="sc-nav-toggle__line"></span>
+        <span class="sc-nav-toggle__line"></span>
+        <span class="sc-nav-toggle__line"></span>
+        <span class="sr-only">Открыть меню</span>
+      </button>
+      <ul class="nav-links" id="main-nav-links">
         <li><a href="/osminogki/#summer-camp-program">Программа</a></li>
         <li><a href="/osminogki/#summer-camp-pricing-title">Стоимость</a></li>
         <li><a href="/osminogki/#summer-camp-faq-title">Вопросы</a></li>
@@ -313,6 +319,10 @@
     </div>
   </section>
 </section>
+<nav class="sc-sticky-actions" aria-label="Быстрые действия">
+  <a class="sc-button sc-button--primary" href="https://t.me/YourTelegramBot" data-product-id="summer_camp_2025">Записаться</a>
+  <a class="sc-button sc-button--ghost" href="https://t.me/YourTelegramBot" data-product-id="summer_camp_2025">Задать вопрос</a>
+</nav>
 </div>
 
 
@@ -323,8 +333,10 @@
     <div class="footer-content">
       <div class="footer-section">
         <h3>Контакты</h3>
-        <p>Telegram: @YourTelegramBot</p>
-        <p>Email: info@example.com</p>
+        <ul>
+          <li><a href="https://t.me/YourTelegramBot" data-product-id="summer_camp_2025">Telegram</a></li>
+          <li><a href="mailto:info@example.com">info@example.com</a></li>
+        </ul>
       </div>
       <div class="footer-section">
         <h3>Сайты школы</h3>

@@ -3,8 +3,10 @@
     <div class="footer-content">
       <div class="footer-section">
         <h3>Контакты</h3>
-        <p>Telegram: @YourTelegramBot</p>
-        <p>Email: info@example.com</p>
+        <ul>
+          <li><a href="https://t.me/{{ bot_username | default: 'YourTelegramBot' }}" data-product-id="{{ product_id }}">Telegram</a></li>
+          <li><a href="mailto:info@example.com">info@example.com</a></li>
+        </ul>
       </div>
       <div class="footer-section">
         <h3>Сайты школы</h3>

@@ -1,8 +1,32 @@
 document.addEventListener('DOMContentLoaded', () => {
   const page = document.querySelector('.sc-page');
+  const header = document.querySelector('.site-header--summer-camp');
+  const navToggle = header?.querySelector('.sc-nav-toggle');
+  const navLinks = header?.querySelector('.nav-links');
   const revealItems = document.querySelectorAll('.sc-page [data-reveal]');
   const parallaxItems = document.querySelectorAll('.sc-page [data-parallax-bg], .sc-page [data-parallax-content]');
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  if (navToggle && navLinks) {
+    const setMenuOpen = (isOpen) => {
+      header.classList.toggle('is-nav-open', isOpen);
+      navToggle.setAttribute('aria-expanded', String(isOpen));
+    };
+
+    navToggle.addEventListener('click', () => {
+      setMenuOpen(navToggle.getAttribute('aria-expanded') !== 'true');
+    });
+
+    navLinks.querySelectorAll('a').forEach((link) => {
+      link.addEventListener('click', () => setMenuOpen(false));
+    });
+
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape') {
+        setMenuOpen(false);
+      }
+    });
+  }
 
   if (revealItems.length) {
     if (!('IntersectionObserver' in window)) {

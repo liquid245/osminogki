@@ -272,6 +272,10 @@ layout: default
     </div>
   </section>
 </section>
+<nav class="sc-sticky-actions" aria-label="Быстрые действия">
+  <a class="sc-button sc-button--primary" href="https://t.me/{{ bot_username | default: 'YourTelegramBot' }}" data-product-id="{{ product_id }}">Записаться</a>
+  <a class="sc-button sc-button--ghost" href="https://t.me/{{ bot_username | default: 'YourTelegramBot' }}" data-product-id="{{ product_id }}">Задать вопрос</a>
+</nav>
 </div>
 {% else %}
 <section class="block block-hero">

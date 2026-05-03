@@ -3,3 +3,15 @@ node_modules/
 .env.*
 *.secret
 secrets/
+
+# Локальные служебные файлы
+.DS_Store
+**/.DS_Store
+
+# Артефакты локальных UI/e2e-проверок
+test-results/
+playwright-report/
+
+# Дубли файлов, создаваемые Finder в сгенерированной сборке
+_dist/* 2.*
+_dist/**/* 2.*

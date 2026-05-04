@@ -3,6 +3,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("robots.txt");
   eleventyConfig.addPassthroughCopy("404.html");
   eleventyConfig.addPassthroughCopy("CNAME");
+  eleventyConfig.addPassthroughCopy("site.webmanifest");
 
   // Фильтр для чтения MD файлов
   eleventyConfig.addFilter("readMarkdown", async function(path) {

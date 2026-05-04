@@ -3,7 +3,7 @@ type: "hero"
 background_image: "/assets/images/english-hero-bg.jpg"
 ---
 
-# 🌍 English Pro Kids 2025
+# 🌍 English Pro Kids 2026
 
 ### Английский, который работает!
 

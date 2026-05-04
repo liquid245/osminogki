@@ -5,7 +5,7 @@ product_id: "summer_camp_2025"
 bot_username: "osminogki_montessori_bot"
 layout: "product"
 og_image: "/assets/images/summer-camp-og.jpg"
-canonical_url: "https://username.github.io/summer-camp/"
+canonical_url: "https://osminozhki-camp.ru/summer-camp/"
 blocks_order:
   - "01-hero.md"
   - "02-problem.md"

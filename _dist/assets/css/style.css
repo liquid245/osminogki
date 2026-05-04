@@ -721,7 +721,6 @@ main {
   z-index: -1;
   transform: translate3d(var(--sc-parallax-x, 0px), var(--sc-parallax-y, 0px), 0) scale(var(--sc-ambient-scale, 1));
   animation: scAmbientDrift 14s ease-in-out infinite;
-  will-change: transform;
 }
 
 .sc-hero__ambient--sun {
@@ -747,12 +746,12 @@ main {
     scale: 1;
   }
   38% {
-    translate: 18px -22px;
-    scale: 1.1;
+    translate: 8px -10px;
+    scale: 1.06;
   }
   70% {
-    translate: -14px 16px;
-    scale: 0.97;
+    translate: -6px 8px;
+    scale: 0.98;
   }
 }
 
@@ -884,7 +883,6 @@ main {
   border-radius: 24px;
   background: rgba(255, 255, 255, 0.58);
   box-shadow: 0 15px 40px rgba(62, 42, 8, 0.08);
-  backdrop-filter: blur(18px);
 }
 
 .sc-hero__metrics dt {
@@ -904,7 +902,6 @@ main {
   position: relative;
   min-height: 660px;
   transform: translate3d(0, var(--sc-parallax-y, 0px), 0);
-  will-change: transform;
 }
 
 .sc-photo-card {
@@ -985,7 +982,6 @@ main {
   background: rgba(255, 255, 255, 0.74);
   color: var(--sc-ink);
   box-shadow: 0 20px 58px rgba(20, 33, 24, 0.18);
-  backdrop-filter: blur(18px);
 }
 
 .sc-glass-note strong {
@@ -1057,7 +1053,6 @@ main {
   border: 1px solid var(--sc-line);
   background: rgba(255, 255, 255, 0.68);
   box-shadow: var(--sc-shadow);
-  backdrop-filter: blur(18px);
   transition: transform 260ms ease, box-shadow 260ms ease, border-color 260ms ease, background 260ms ease;
 }
 
@@ -1604,7 +1599,6 @@ main {
     pointer-events: none;
     transform: translateY(-0.5rem) scale(0.98);
     transition: opacity 180ms ease, transform 180ms ease;
-    backdrop-filter: blur(18px);
   }
 
   .site-header--summer-camp.is-nav-open .nav-links {

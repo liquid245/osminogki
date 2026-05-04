@@ -55,12 +55,13 @@ document.addEventListener('DOMContentLoaded', () => {
   let pointerX = 0;
   let pointerY = 0;
   let scrollY = window.scrollY;
-  const ambientStart = window.performance.now();
+  let rafId = null;
+  let idleTimer = null;
+  const IDLE_MS = 300;
 
-  const renderMotion = (timestamp = window.performance.now()) => {
-    const elapsed = (timestamp - ambientStart) / 1000;
-    const ambientA = Math.sin(elapsed * 0.42) * 18;
-    const ambientB = Math.cos(elapsed * 0.31) * 22;
+  const setCSSProperties = () => {
+    const ambientA = 0;
+    const ambientB = 0;
     const scrollGlow = Math.min(scrollY * 0.08, 140);
 
     page.style.setProperty('--sc-pointer-x', `${pointerX}px`);
@@ -71,21 +72,41 @@ document.addEventListener('DOMContentLoaded', () => {
 
     parallaxItems.forEach((item) => {
       const speed = Number.parseFloat(item.dataset.parallaxSpeed || '0.08');
-      item.style.setProperty('--sc-parallax-x', `${(pointerX * speed) + (ambientA * speed * 1.8)}px`);
-      item.style.setProperty('--sc-parallax-y', `${(scrollY * speed * -1.35) + (pointerY * speed) + (ambientB * speed * 1.8)}px`);
+      item.style.setProperty('--sc-parallax-x', `${pointerX * speed}px`);
+      item.style.setProperty('--sc-parallax-y', `${(scrollY * speed * -1.35) + (pointerY * speed)}px`);
     });
+  };
 
-    window.requestAnimationFrame(renderMotion);
+  const startLoop = () => {
+    if (rafId !== null) return;
+    const frame = () => {
+      setCSSProperties();
+      rafId = requestAnimationFrame(frame);
+    };
+    rafId = requestAnimationFrame(frame);
+  };
+
+  const stopLoop = () => {
+    if (rafId !== null) {
+      cancelAnimationFrame(rafId);
+      rafId = null;
+    }
   };
 
   window.addEventListener('pointermove', (event) => {
     pointerX = event.clientX - window.innerWidth / 2;
     pointerY = event.clientY - window.innerHeight / 2;
+    startLoop();
+    clearTimeout(idleTimer);
+    idleTimer = setTimeout(stopLoop, IDLE_MS);
   }, { passive: true });
 
   window.addEventListener('scroll', () => {
     scrollY = window.scrollY;
+    startLoop();
+    clearTimeout(idleTimer);
+    idleTimer = setTimeout(stopLoop, IDLE_MS);
   }, { passive: true });
 
-  window.requestAnimationFrame(renderMotion);
+  setCSSProperties();
 });

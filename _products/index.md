@@ -1,8 +1,8 @@
 ---
-title: "Dream Camp 2025 — летний лагерь для детей"
-description: "Премиальный летний лагерь Dream Camp для детей 7–14 лет: творчество, спорт, технологии и заботливые наставники. Забронируйте место."
+title: "Летняя программа «Осьминожки» 2025"
+description: "Летняя программа «Осьминожки» для детей 6–12 лет: творчество, спорт, технологии и заботливые наставники. Запишите ребёнка."
 product_id: "summer_camp_2025"
-bot_username: "YourTelegramBot"
+bot_username: "osminogki_montessori_bot"
 layout: "product"
 og_image: "/assets/images/summer-camp-og.jpg"
 canonical_url: "https://username.github.io/"
@@ -15,6 +15,6 @@ blocks_order:
   - "../_shared/blocks/faq.md"
 ---
 
-# Летний лагерь Dream Camp 2025
+# Летняя программа «Осьминожки» 2025
 
 Где каждое лето превращается в незабываемое приключение!

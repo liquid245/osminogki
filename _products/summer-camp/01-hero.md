@@ -3,11 +3,11 @@ type: "hero"
 background_image: "/assets/images/hero-bg.jpg"
 ---
 
-# 🏕️ Dream Camp 2025
+# 🏕️ Летняя программа «Осьминожки» 2025
 
-### Летний лагерь, где мечты становятся реальностью
+### Летняя программа, где мечты становятся реальностью
 
-**Для детей 7-14 лет**
+**Для детей 6-12 лет**
 
 ✨ **Творчество • Спорт • Дружба • Развитие**
 
@@ -24,8 +24,8 @@ background_image: "/assets/images/hero-bg.jpg"
 
 ### 🎯 Осталось всего 15 мест!
 
-[**Забронировать место →**](https://t.me/YourTelegramBot)
+[**Забронировать место →**](https://t.me/osminogki_montessori_bot)
 
 ---
 
-📞 **Вопросы?** Пишите в Telegram: @YourTelegramBot
+📞 **Вопросы?** Пишите в Telegram: @osminogki_montessori_bot

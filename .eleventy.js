@@ -1,7 +1,4 @@
 module.exports = function(eleventyConfig) {
-  const pathPrefix = process.env.ELEVENTY_PATH_PREFIX || "/";
-
-  // Копируем assets
   eleventyConfig.addPassthroughCopy("assets");
   eleventyConfig.addPassthroughCopy("robots.txt");
   eleventyConfig.addPassthroughCopy("404.html");
@@ -36,7 +33,6 @@ module.exports = function(eleventyConfig) {
   });
 
   return {
-    pathPrefix,
     dir: {
       input: "_products",
       output: "_dist",

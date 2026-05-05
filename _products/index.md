@@ -6,12 +6,7 @@ bot_username: "osminogki_montessori_bot"
 layout: "product"
 og_image: "/assets/images/summer-camp-og.jpg"
 canonical_url: "https://osminozhki-camp.ru/"
-blocks_order:
-  - "summer-camp/01-hero.md"
-  - "summer-camp/02-problem.md"
-  - "summer-camp/03-solution.md"
-  - "summer-camp/04-pricing.md"
-  - "../_shared/blocks/reviews.md"
+blocks_order: []
 ---
 
 # Летняя программа «Осьминожки» 2026

@@ -47,4 +47,4 @@ products/<id>/_context.md
 
 ## Где искать reusable policy
 
-Универсальные operational rules для статического frontend находятся в `agents/zones/frontend_static.md`.
+Универсальные operational rules для статического frontend находятся в `scrum_agents/zones/frontend_static.md`.

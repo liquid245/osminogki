@@ -10,7 +10,6 @@ layout: default
     <div class="container sc-hero__grid">
       <div class="sc-hero__content" data-reveal>
         <p class="sc-eyebrow">{{ siteContent.summer_camp_2026.hero.eyebrow }}</p>
-        <p class="sc-hero__dates">{{ siteContent.summer_camp_2026.hero.dates }}</p>
         <h1 id="summer-camp-hero-title">{{ siteContent.summer_camp_2026.hero.title }}</h1>
         <p class="sc-hero__lead">{{ siteContent.summer_camp_2026.hero.lead }}</p>
         <div class="sc-hero__actions" aria-label="Основные действия">
@@ -52,11 +51,9 @@ layout: default
         <p>{{ siteContent.summer_camp_2026.trust.quote.text }}</p>
         <cite>— {{ siteContent.summer_camp_2026.trust.quote.author }}</cite>
       </blockquote>
-      <p class="sc-trust__intro" data-reveal>{{ siteContent.summer_camp_2026.trust.intro }}</p>
       <div class="sc-trust__grid">
         {% for item in siteContent.summer_camp_2026.trust.items %}
         <article class="sc-trust-card sc-interactive-card" data-reveal>
-          <span class="sc-trust-card__icon">{{ item.icon }}</span>
           <h3>{{ item.title }}</h3>
           <p>{{ item.description }}</p>
         </article>

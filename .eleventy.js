@@ -40,7 +40,7 @@ module.exports = function(eleventyConfig) {
       output: "_dist",
       includes: "../_includes",
       layouts: "../_layouts",
-      data: "../../_data"
+      data: "../_data"
     }
   };
 };

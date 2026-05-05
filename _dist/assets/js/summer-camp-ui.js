@@ -106,7 +106,21 @@ document.addEventListener('DOMContentLoaded', () => {
     startLoop();
     clearTimeout(idleTimer);
     idleTimer = setTimeout(stopLoop, IDLE_MS);
+
+    const progressBar = document.querySelector('.sc-scroll-progress');
+    if (progressBar) {
+      const scrollPercent = (scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+      progressBar.style.width = `${Math.min(scrollPercent, 100)}%`;
+      progressBar.setAttribute('aria-valuenow', Math.round(Math.min(scrollPercent, 100)));
+    }
   }, { passive: true });
 
   setCSSProperties();
+
+  const progressBar = document.querySelector('.sc-scroll-progress');
+  if (progressBar) {
+    const scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+    progressBar.style.width = `${Math.min(scrollPercent, 100)}%`;
+    progressBar.setAttribute('aria-valuenow', Math.round(Math.min(scrollPercent, 100)));
+  }
 });

@@ -568,22 +568,31 @@ main {
   animation: fadeIn 0.6s ease-out;
 }
 
-/* Custom scrollbar */
+/* Scroll progress bar */
+.sc-scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 4px;
+  background: linear-gradient(90deg, #142118 0%, #25351f 42%, #ff7a1a 100%);
+  z-index: 1000;
+  transition: width 80ms ease-out;
+  will-change: width;
+}
+
+/* Hide native scrollbar */
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 0;
+  height: 0;
 }
 
-::-webkit-scrollbar-track {
-  background: var(--gray-100);
+html {
+  scrollbar-width: none;
 }
 
-::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, #142118 0%, #25351f 42%, #ff7a1a 100%);
-  border-radius: 5px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(180deg, #25351f 0%, #ff7a1a 100%);
+body {
+  -ms-overflow-style: none;
 }
 
 /* Premium Summer Camp redesign (TASK-010) */
@@ -650,13 +659,7 @@ main {
   scrollbar-color: #ff7a1a #142118;
 }
 
-.sc-page::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, #142118 0%, #25351f 42%, #ff7a1a 100%);
-}
 
-.sc-page::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(180deg, #25351f 0%, #ff7a1a 100%);
-}
 
 #summer-camp-program,
 #summer-camp-pricing,

@@ -5,8 +5,7 @@
 
 const DEFAULT_BOT_USERNAME = 'osminogki_montessori_bot';
 const PRODUCT_IDS_BY_PATH = {
-  '/summer-camp/': 'summer_camp_2025',
-  '/english-course/': 'english_course_2025'
+  '/summer-camp/': 'summer_camp_2025'
 };
 const PAYLOAD_LIMIT = 64;
 const FIELD_PATTERNS = {

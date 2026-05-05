@@ -1,24 +1,14 @@
 const { test, expect } = require('@playwright/test');
 
-// Задача: TASK-008
+// Задача: TASK-027
 test.describe('Telegram deep link contract', () => {
   test('summer camp landing builds start payload from product_id and UTM params', async ({ page }) => {
-    await page.goto('/summer-camp/?utm_source=yandex&utm_campaign=summer25');
+    await page.goto('/summer-camp/?utm_source=yandex&utm_campaign=summer25', { waitUntil: 'domcontentloaded' });
 
-    const links = page.locator('a[href^="https://t.me/YourTelegramBot"]');
+    const links = page.locator('a[href^="https://t.me/osminogki_montessori_bot"]');
     await expect(links.first()).toHaveAttribute(
       'href',
-      'https://t.me/YourTelegramBot?start=summer_camp_2025__yandex__summer25'
-    );
-  });
-
-  test('english course landing keeps the same payload shape', async ({ page }) => {
-    await page.goto('/english-course/?utm_source=vk&utm_campaign=english25');
-
-    const links = page.locator('a[href^="https://t.me/YourTelegramBot"]');
-    await expect(links.first()).toHaveAttribute(
-      'href',
-      'https://t.me/YourTelegramBot?start=english_course_2025__vk__english25'
+      'https://t.me/osminogki_montessori_bot?start=summer_camp_2026__yandex__summer25'
     );
   });
 });

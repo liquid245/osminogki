@@ -12,7 +12,6 @@ blocks_order:
   - "03-solution.md"
   - "04-pricing.md"
   - "../_shared/blocks/reviews.md"
-  - "../_shared/blocks/faq.md"
 ---
 
 # Летняя программа «Осьминожки» 2026

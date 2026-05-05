@@ -12,7 +12,6 @@ blocks_order:
   - "summer-camp/03-solution.md"
   - "summer-camp/04-pricing.md"
   - "../_shared/blocks/reviews.md"
-  - "../_shared/blocks/faq.md"
 ---
 
 # Летняя программа «Осьминожки» 2026

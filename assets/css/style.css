@@ -1040,7 +1040,41 @@ main {
 }
 
 .sc-trust__grid {
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.sc-trust__intro {
+  max-width: 640px;
+  margin: 0 auto 2rem;
+  text-align: center;
+  font-size: 1.15rem;
+  line-height: 1.6;
+}
+
+.sc-quote {
+  max-width: 720px;
+  margin: 1.5rem auto 2.5rem;
+  padding: 1.5rem 2rem;
+  text-align: center;
+  border-left: none;
+  font-style: italic;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: var(--sc-ink-muted);
+}
+
+.sc-quote cite {
+  display: block;
+  margin-top: 0.75rem;
+  font-style: normal;
+  font-size: 0.9rem;
+  color: var(--sc-orange);
+}
+
+.sc-trust-card__icon {
+  font-size: 2.2rem;
+  display: block;
+  margin-bottom: 0.5rem;
 }
 
 .sc-trust-card,
@@ -1084,7 +1118,7 @@ main {
 }
 
 .sc-trust-card h3 {
-  margin-top: 3rem;
+  margin-top: 0.3rem;
   margin-bottom: 0.6rem;
   font-size: clamp(1.55rem, 2.5vw, 2.15rem);
   line-height: 1.04;

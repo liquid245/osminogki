@@ -1326,6 +1326,16 @@ main {
   gap: 0.85rem;
 }
 
+.sc-faq__items--two-col {
+  grid-template-columns: 1fr 1fr;
+}
+
+@media (max-width: 640px) {
+  .sc-faq__items--two-col {
+    grid-template-columns: 1fr;
+  }
+}
+
 .sc-faq details {
   padding: 1.2rem 1.35rem;
   border-radius: 24px;

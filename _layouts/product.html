@@ -30,7 +30,6 @@ layout: default
       <div class="sc-hero__visual" aria-label="Фотографии атмосферы программы «Осьминожки»" data-reveal data-parallax-content data-parallax-speed="0.16">
         <div class="sc-photo-card sc-photo-card--main">
           <img src="{{ siteContent.summer_camp_2026.hero.images.main.src | url }}" width="1200" height="1600" alt="Дети на летней программе «Осьминожки» во время активности" fetchpriority="high">
-          <span>{{ siteContent.summer_camp_2026.hero.images.main.caption }}</span>
         </div>
         <div class="sc-photo-card sc-photo-card--small sc-photo-card--top">
           <img src="{{ siteContent.summer_camp_2026.hero.images.small_top.src | url }}" width="1200" height="1600" alt="Командная атмосфера летней программы «Осьминожки»">
@@ -171,14 +170,8 @@ layout: default
   </section>
 
   <section class="sc-section sc-faq" id="summer-camp-faq" aria-labelledby="summer-camp-faq-title">
-    <div class="container sc-faq__grid">
-      <div class="sc-section__intro" data-reveal>
-        <p class="sc-eyebrow">{{ siteContent.summer_camp_2026.faq.eyebrow }}</p>
-        <h2 id="summer-camp-faq-title">{{ siteContent.summer_camp_2026.faq.title }}</h2>
-        <p>{{ siteContent.summer_camp_2026.faq.lead }}</p>
-        <a class="sc-button sc-button--primary" href="https://t.me/{{ bot_username | default: 'osminogki_montessori_bot' }}" data-product-id="{{ product_id }}">{{ siteContent.summer_camp_2026.faq.cta }}</a>
-      </div>
-      <div class="sc-faq__items" data-reveal>
+    <div class="container">
+      <div class="sc-faq__items sc-faq__items--two-col" data-reveal>
         {% for item in faq %}
         <details>
           <summary>{{ item.question }}</summary>

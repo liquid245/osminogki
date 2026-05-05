@@ -174,6 +174,10 @@ layout: default
 
   <section class="sc-section sc-faq" id="summer-camp-faq" aria-labelledby="summer-camp-faq-title">
     <div class="container">
+      <div class="sc-section__intro sc-section__intro--center" data-reveal>
+        <p class="sc-eyebrow">{{ siteContent.summer_camp_2026.faq.eyebrow }}</p>
+        <h2 id="summer-camp-faq-title">{{ siteContent.summer_camp_2026.faq.title }}</h2>
+      </div>
       <div class="sc-faq__items sc-faq__items--two-col" data-reveal>
         {% for item in faq %}
         <details>

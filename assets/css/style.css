@@ -1043,38 +1043,35 @@ main {
   grid-template-columns: repeat(2, 1fr);
 }
 
-.sc-trust__intro {
-  max-width: 640px;
-  margin: 0 auto 2rem;
-  text-align: center;
-  font-size: 1.15rem;
-  line-height: 1.6;
-}
-
 .sc-quote {
   max-width: 720px;
   margin: 1.5rem auto 2.5rem;
-  padding: 1.5rem 2rem;
+  padding: 2rem 2.5rem;
   text-align: center;
-  border-left: none;
+  background: rgba(255, 122, 26, 0.06);
+  border-radius: 30px;
   font-style: italic;
-  font-size: 1.05rem;
-  line-height: 1.6;
-  color: var(--sc-ink-muted);
+  font-size: 1.15rem;
+  line-height: 1.7;
+  color: var(--sc-ink);
+}
+
+.sc-quote::before {
+  content: '\201C';
+  display: block;
+  font-size: 3rem;
+  line-height: 1;
+  color: var(--sc-orange);
+  margin-bottom: 0.5rem;
 }
 
 .sc-quote cite {
   display: block;
-  margin-top: 0.75rem;
+  margin-top: 1rem;
   font-style: normal;
   font-size: 0.9rem;
   color: var(--sc-orange);
-}
-
-.sc-trust-card__icon {
-  font-size: 2.2rem;
-  display: block;
-  margin-bottom: 0.5rem;
+  font-weight: 600;
 }
 
 .sc-trust-card,

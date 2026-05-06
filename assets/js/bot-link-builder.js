@@ -28,20 +28,26 @@ export class BotLinkBuilder {
       .replace(/^_+|_+$/g, '');
   }
 
-  buildPayload(productId, utmParams = {}) {
+  buildPayload(productId, tariff, utmParams = {}) {
     const payloadParts = {
       product_id: this.normalizeValue(productId),
+      tariff: tariff ? this.normalizeValue(tariff) : '',
       utm_source: this.normalizeValue(utmParams.utm_source),
       utm_campaign: this.normalizeValue(utmParams.utm_campaign)
     };
 
     Object.entries(FIELD_PATTERNS).forEach(([key, pattern]) => {
+      if (key === 'tariff') return;
       if (!pattern.test(payloadParts[key])) {
         throw new Error(`Invalid deep link ${key}`);
       }
     });
 
-    const payload = `${payloadParts.product_id}__${payloadParts.utm_source}__${payloadParts.utm_campaign}`;
+    let payload = payloadParts.product_id;
+    if (payloadParts.tariff) {
+      payload += `__${payloadParts.tariff}`;
+    }
+    payload += `__${payloadParts.utm_source}__${payloadParts.utm_campaign}`;
     if (payload.length > PAYLOAD_LIMIT) {
       throw new Error('Telegram deep link payload exceeds 64 characters');
     }
@@ -49,8 +55,8 @@ export class BotLinkBuilder {
     return payload;
   }
 
-  buildLink(productId, utmParams = {}) {
-    return `${this.baseUrl}?start=${this.buildPayload(productId, utmParams)}`;
+  buildLink(productId, tariff, utmParams = {}) {
+    return `${this.baseUrl}?start=${this.buildPayload(productId, tariff, utmParams)}`;
   }
 
   updateBotLinks(selector = 'a[href*="t.me"]') {
@@ -64,14 +70,15 @@ export class BotLinkBuilder {
 
     links.forEach(link => {
       const productId = link.dataset.productId || pageProductId;
+      const tariff = link.dataset.tariff || null;
       if (productId) {
-        link.href = this.buildLink(productId, utmParams);
+        link.href = this.buildLink(productId, tariff, utmParams);
       }
     });
   }
 }
 
-// Задача: TASK-008
+// Задача: TASK-008, TASK-037
 document.addEventListener('DOMContentLoaded', () => {
   const botUsername = document.body.dataset.botUsername || DEFAULT_BOT_USERNAME;
   const linkBuilder = new BotLinkBuilder(botUsername);

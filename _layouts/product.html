@@ -145,7 +145,7 @@ layout: default
             <li>{{ feature }}</li>
             {% endfor %}
           </ul>
-          <a class="sc-button sc-button--{{ pkg.button_modifier }}" href="https://t.me/{{ bot_username | default: 'osminogki_montessori_bot' }}" data-product-id="{{ product_id }}">{{ pkg.cta }}</a>
+          <a class="sc-button sc-button--{{ pkg.button_modifier }}" href="https://t.me/{{ bot_username | default: 'osminogki_montessori_bot' }}" data-product-id="{{ product_id }}" data-tariff="{{ pkg.payload_modifier }}">{{ pkg.cta }}</a>
         </article>
         {% endfor %}
       </div>

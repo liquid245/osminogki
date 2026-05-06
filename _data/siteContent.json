@@ -112,6 +112,7 @@
       "packages": [
         {
           "modifier": "one",
+          "payload_modifier": "1week",
           "label": "Одна неделя",
           "subtitle": "5 дней погружения",
           "price": "12 500 ₽",
@@ -120,6 +121,7 @@
         },
         {
           "modifier": "two",
+          "payload_modifier": "2week",
           "label": "Две недели",
           "subtitle": "10 дней максимума",
           "price": "22 500 ₽",
@@ -128,6 +130,7 @@
         },
         {
           "modifier": "three",
+          "payload_modifier": "3week",
           "label": "Три недели",
           "subtitle": "15 дней полного лета",
           "price": "30 000 ₽",

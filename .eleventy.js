@@ -1,9 +1,11 @@
+// Задача: TASK-032
 module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("assets");
   eleventyConfig.addPassthroughCopy("robots.txt");
   eleventyConfig.addPassthroughCopy("404.html");
   eleventyConfig.addPassthroughCopy("CNAME");
   eleventyConfig.addPassthroughCopy("site.webmanifest");
+  eleventyConfig.addPassthroughCopy("_data");
 
   // Фильтр для чтения MD файлов
   eleventyConfig.addFilter("readMarkdown", async function(path) {

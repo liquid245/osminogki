@@ -179,7 +179,7 @@ layout: default
         <h2 id="summer-camp-faq-title">{{ siteContent.summer_camp_2026.faq.title }}</h2>
       </div>
       <div class="sc-faq__items sc-faq__items--two-col" data-reveal>
-        {% for item in faq %}
+        {% for item in siteContent.summer_camp_2026.faq.items %}
         <details>
           <summary>{{ item.question }}</summary>
           <p>{{ item.answer }}</p>
@@ -317,7 +317,7 @@ layout: default
 <section class="block block-faq">
   <div class="container">
     <h2>❓ Часто задаваемые вопросы</h2>
-    {% for item in faq %}
+    {% for item in siteContent.summer_camp_2026.faq.items %}
     <details>
       <summary>{{ item.question }}</summary>
       <p>{{ item.answer }}</p>

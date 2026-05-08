@@ -4,7 +4,7 @@ layout: default
 {% if product_id == "summer_camp_2026" %}
 <div class="sc-scroll-progress" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
 <div class="sc-page">
-<section class="sc-page__surface" aria-label="Летний лагерь Осьминожки">
+<section class="sc-page__surface" aria-label="Летний клуб Осьминожки">
   <section class="sc-hero" aria-labelledby="summer-camp-hero-title">
     <div class="sc-hero__ambient sc-hero__ambient--sun" data-parallax-bg data-parallax-speed="0.08"></div>
     <div class="sc-hero__ambient sc-hero__ambient--mint" data-parallax-bg data-parallax-speed="0.05"></div>
@@ -17,7 +17,7 @@ layout: default
           <a class="sc-button sc-button--primary" href="https://t.me/{{ bot_username | default: 'osminogki_montessori_bot' }}" data-product-id="{{ product_id }}">{{ siteContent.summer_camp_2026.hero.cta_primary }}</a>
           <a class="sc-button sc-button--ghost" href="#summer-camp-program">{{ siteContent.summer_camp_2026.hero.cta_ghost }}</a>
         </div>
-        <dl class="sc-hero__metrics" aria-label="Ключевые показатели лагеря">
+        <dl class="sc-hero__metrics" aria-label="Ключевые показатели клуба">
           {% for metric in siteContent.summer_camp_2026.hero.metrics %}
           <div>
             <dt>{{ metric.value }}</dt>
@@ -27,15 +27,15 @@ layout: default
         </dl>
       </div>
 
-      <div class="sc-hero__visual" aria-label="Фотографии атмосферы лагеря «Осьминожки»" data-reveal data-parallax-content data-parallax-speed="0.16">
+      <div class="sc-hero__visual" aria-label="Фотографии атмосферы клуба «Осьминожки»" data-reveal data-parallax-content data-parallax-speed="0.16">
         <div class="sc-photo-card sc-photo-card--main">
-          <img src="{{ siteContent.summer_camp_2026.hero.images.main.src | url }}" width="1200" height="1600" alt="Дети на летнем лагере «Осьминожки» во время активности" fetchpriority="high">
+          <img src="{{ siteContent.summer_camp_2026.hero.images.main.src | url }}" width="1200" height="1600" alt="Дети в летнем клубе «Осьминожки» во время активности" fetchpriority="high">
         </div>
         <div class="sc-photo-card sc-photo-card--small sc-photo-card--top">
-          <img src="{{ siteContent.summer_camp_2026.hero.images.small_top.src | url }}" width="1200" height="1600" alt="Командная атмосфера летнего лагеря «Осьминожки»">
+          <img src="{{ siteContent.summer_camp_2026.hero.images.small_top.src | url }}" width="1200" height="1600" alt="Командная атмосфера летнего клуба «Осьминожки»">
         </div>
         <div class="sc-photo-card sc-photo-card--small sc-photo-card--bottom">
-          <img src="{{ siteContent.summer_camp_2026.hero.images.small_bottom.src | url }}" width="1200" height="1600" alt="Творческая и игровая лагерь для детей">
+          <img src="{{ siteContent.summer_camp_2026.hero.images.small_bottom.src | url }}" width="1200" height="1600" alt="Творческое и игровое пространство для детей">
         </div>
 
       </div>
@@ -121,7 +121,7 @@ layout: default
       </div>
       <div class="sc-image-rail" data-reveal>
         {% for img in siteContent.summer_camp_2026.gallery.images %}
-        <img src="{{ img | url }}" width="1200" height="1600" alt="Участники программы на летней активности">
+        <img src="{{ img | url }}" width="1200" height="1600" alt="Участники летней смены">
         {% endfor %}
       </div>
     </div>
@@ -223,7 +223,7 @@ layout: default
     </ul>
     <p><strong>Результат:</strong> лето пролетает, а ваш ребёнок ничего не узнал и никого не встретил.</p>
     <h3>✅ Мы знаем решение!</h3>
-    <p>В летней программе «Осьминожки» ваш ребёнок:</p>
+    <p>На летних встречах «Осьминожки» ваш ребёнок:</p>
     <ul>
       <li>🔥 <strong>Сами просится утром</strong> — потому что там интересно!</li>
       <li>🎯 <strong>Развивается играючи</strong> — без скучных уроков</li>
@@ -235,10 +235,10 @@ layout: default
 
 <section class="block block-solution">
   <div class="container">
-    <h2>🎯 Что делает нашу программу особенной?</h2>
+    <h2>🎯 Что делает наши встречи особенными?</h2>
     <h3>🎨 Творческие мастерские</h3>
     <ul>
-      <li><strong>Живопись и графика</strong> — профессиональные художники-педагоги</li>
+      <li><strong>Живопись и графика</strong> — профессиональные художники-наставники</li>
       <li><strong>Лепка и керамика</strong> — собственные шедевры домой</li>
       <li><strong>Музыкальная студия</strong> — запись треков и создание музыки</li>
       <li><strong>Фотография и видеомонтаж</strong> — современные навыки</li>
@@ -252,8 +252,8 @@ layout: default
     </ul>
     <h3>🤖 Технологии будущего</h3>
     <ul>
-      <li><strong>Робототехника</strong> — собираем и программируем роботов</li>
-      <li><strong>Программирование</strong> — Scratch, Python, создание игр</li>
+      <li><strong>Робототехника</strong> — собираем и запускаем роботов</li>
+      <li><strong>Цифровое творчество</strong> — Scratch, Python, создание игр</li>
       <li><strong>3D-моделирование</strong> — от идеи до готовой модели</li>
       <li><strong>VR и AR</strong> — виртуальные приключения</li>
     </ul>
@@ -300,11 +300,11 @@ layout: default
   <div class="container">
     <h2>⭐ Отзывы родителей и детей</h2>
     <blockquote>
-      <p>"Мой сын вернулся из программы с горящими глазами! Теперь хочет только туда. Научился программировать и нашёл настоящих друзей. Спасибо за волшебное лето!"</p>
+      <p>"Мой сын вернулся из клуба с горящими глазами! Теперь хочет только туда. Освоил Scratch и Python, нашёл настоящих друзей. Спасибо за волшебное лето!"</p>
       <cite>— Анна М., мама Артёма (12 лет)</cite>
     </blockquote>
     <blockquote>
-      <p>"Отличная организация, профессиональные педагоги. Дочь прошла от стеснительной девочки до уверенной лидерской команды. Рекомендую всем!"</p>
+      <p>"Отличная организация, профессиональные наставники. Дочь прошла от стеснительной девочки до уверенной лидерской команды. Рекомендую всем!"</p>
       <cite>— Сергей К., папа Маши (10 лет)</cite>
     </blockquote>
     <blockquote>

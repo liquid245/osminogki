@@ -1,7 +1,7 @@
 {
   "name": "summer-camp-site",
   "version": "1.0.0",
-  "description": "Сайт летнего лагеря на 11ty",
+  "description": "Сайт летнего клуба на 11ty",
   "main": ".eleventy.js",
   "scripts": {
     "build": "eleventy",

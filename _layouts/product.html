@@ -17,7 +17,7 @@ layout: default
           <a class="sc-button sc-button--primary" href="https://t.me/{{ bot_username | default: 'osminogki_montessori_bot' }}" data-product-id="{{ product_id }}">{{ siteContent.summer_camp_2026.hero.cta_primary }}</a>
           <a class="sc-button sc-button--ghost" href="#summer-camp-program">{{ siteContent.summer_camp_2026.hero.cta_ghost }}</a>
         </div>
-        <dl class="sc-hero__metrics" aria-label="Ключевые показатели программы">
+        <dl class="sc-hero__metrics" aria-label="Ключевые показатели лагеря">
           {% for metric in siteContent.summer_camp_2026.hero.metrics %}
           <div>
             <dt>{{ metric.value }}</dt>
@@ -27,12 +27,12 @@ layout: default
         </dl>
       </div>
 
-      <div class="sc-hero__visual" aria-label="Фотографии атмосферы программы «Осьминожки»" data-reveal data-parallax-content data-parallax-speed="0.16">
+      <div class="sc-hero__visual" aria-label="Фотографии атмосферы лагеря «Осьминожки»" data-reveal data-parallax-content data-parallax-speed="0.16">
         <div class="sc-photo-card sc-photo-card--main">
-          <img src="{{ siteContent.summer_camp_2026.hero.images.main.src | url }}" width="1200" height="1600" alt="Дети на летней программе «Осьминожки» во время активности" fetchpriority="high">
+          <img src="{{ siteContent.summer_camp_2026.hero.images.main.src | url }}" width="1200" height="1600" alt="Дети на летнем лагере «Осьминожки» во время активности" fetchpriority="high">
         </div>
         <div class="sc-photo-card sc-photo-card--small sc-photo-card--top">
-          <img src="{{ siteContent.summer_camp_2026.hero.images.small_top.src | url }}" width="1200" height="1600" alt="Командная атмосфера летней программы «Осьминожки»">
+          <img src="{{ siteContent.summer_camp_2026.hero.images.small_top.src | url }}" width="1200" height="1600" alt="Командная атмосфера летнего лагеря «Осьминожки»">
         </div>
         <div class="sc-photo-card sc-photo-card--small sc-photo-card--bottom">
           <img src="{{ siteContent.summer_camp_2026.hero.images.small_bottom.src | url }}" width="1200" height="1600" alt="Творческая и игровая лагерь для детей">

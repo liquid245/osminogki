@@ -5,7 +5,7 @@
 
 const DEFAULT_BOT_USERNAME = 'osminogki_montessori_bot';
 const PRODUCT_IDS_BY_PATH = {
-  '/summer-camp/': 'summer_camp_2025'
+  '/summer-camp/': 'summer_camp_2026'
 };
 const PAYLOAD_LIMIT = 64;
 const FIELD_PATTERNS = {
@@ -59,7 +59,7 @@ export class BotLinkBuilder {
     return `${this.baseUrl}?start=${this.buildPayload(productId, tariff, utmParams)}`;
   }
 
-  updateBotLinks(selector = 'a[href*="t.me"]') {
+  updateBotLinks(selector = 'a[href*="t.me"][data-product-id][data-tariff]') {
     const links = document.querySelectorAll(selector);
     const pageProductId = document.body.dataset.productId || PRODUCT_IDS_BY_PATH[window.location.pathname];
     const utmHandler = window.utmHandler;

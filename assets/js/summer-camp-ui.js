@@ -136,4 +136,26 @@ document.addEventListener('DOMContentLoaded', () => {
     localStorage.setItem(key, places);
     placesEl.textContent = places;
   }
+
+  const leadToggle = document.querySelector('.sc-lead-toggle');
+  const lead = document.getElementById('hero-lead');
+  if (leadToggle && lead) {
+    if (lead.scrollHeight > lead.clientHeight) {
+      lead.classList.add('is-collapsed');
+      leadToggle.hidden = false;
+    } else {
+      leadToggle.hidden = true;
+    }
+
+    leadToggle.addEventListener('click', () => {
+      const isExpanded = leadToggle.getAttribute('aria-expanded') === 'true';
+      leadToggle.setAttribute('aria-expanded', String(!isExpanded));
+      lead.classList.toggle('is-collapsed', isExpanded);
+      leadToggle.classList.toggle('is-expanded', !isExpanded);
+      const textEl = leadToggle.querySelector('.sc-lead-toggle__text');
+      if (textEl) {
+        textEl.textContent = isExpanded ? textEl.dataset.collapsed : textEl.dataset.expanded;
+      }
+    });
+  }
 });

@@ -63,7 +63,8 @@
         <div class="sc-hero__content-top" data-reveal>
           <p class="sc-eyebrow">6–12 лет • 8 июня - 3 июля • 3 - 22 августа</p>
           <h1 id="summer-camp-hero-title">Летний Игроград</h1>
-          <p class="sc-hero__lead">Пример расписания на день:
+          <div class="sc-hero__lead-wrapper">
+            <p class="sc-hero__lead" id="hero-lead">Пример расписания на день:
 09:00 — сбор детей
 09:15 — утренний круг, настрой на день
 09:30 — активные игры, знакомство с новыми форматами, прогулка
@@ -73,6 +74,13 @@
 15:30 — полдник
 16:00 — творческий мастер-класс
 17:30 — подведение итогов дня, завершение</p>
+            <button class="sc-lead-toggle" type="button" aria-expanded="false" aria-controls="hero-lead">
+              <span class="sc-lead-toggle__text" data-collapsed="Развернуть" data-expanded="Свернуть">Развернуть</span>
+              <svg class="sc-lead-toggle__icon" width="12" height="8" viewBox="0 0 12 8" fill="none" aria-hidden="true">
+                <path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+          </div>
         </div>
         <div class="sc-hero__content-bottom" data-reveal>
           <dl class="sc-hero__metrics" aria-label="Ключевые показатели клуба">

@@ -13,7 +13,15 @@ layout: default
         <div class="sc-hero__content-top" data-reveal>
           <p class="sc-eyebrow">{{ siteContent.summer_camp_2026.hero.eyebrow }}</p>
           <h1 id="summer-camp-hero-title">{{ siteContent.summer_camp_2026.hero.title }}</h1>
-          <p class="sc-hero__lead">{{ siteContent.summer_camp_2026.hero.lead }}</p>
+          <div class="sc-hero__lead-wrapper">
+            <p class="sc-hero__lead" id="hero-lead">{{ siteContent.summer_camp_2026.hero.lead }}</p>
+            <button class="sc-lead-toggle" type="button" aria-expanded="false" aria-controls="hero-lead">
+              <span class="sc-lead-toggle__text" data-collapsed="Развернуть" data-expanded="Свернуть">Развернуть</span>
+              <svg class="sc-lead-toggle__icon" width="12" height="8" viewBox="0 0 12 8" fill="none" aria-hidden="true">
+                <path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+          </div>
         </div>
         <div class="sc-hero__content-bottom" data-reveal>
           <dl class="sc-hero__metrics" aria-label="Ключевые показатели клуба">

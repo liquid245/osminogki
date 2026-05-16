@@ -42,6 +42,28 @@ layout: default
     </div>
   </section>
 
+  <section class="sc-section sc-program" id="summer-camp-program" aria-labelledby="summer-camp-program-title">
+    <div class="container">
+      <div class="sc-section__intro sc-section__intro--center" data-reveal>
+        <p class="sc-eyebrow">{{ siteContent.summer_camp_2026.program.eyebrow }}</p>
+        <h2 id="summer-camp-program-title">{{ siteContent.summer_camp_2026.program.title }}</h2>
+        <p>{{ siteContent.summer_camp_2026.program.lead }}</p>
+      </div>
+      <div class="sc-program__grid">
+        {% for card in siteContent.summer_camp_2026.program.cards %}
+        <article class="sc-program-card sc-interactive-card" data-reveal>
+          <img src="{{ card.image | url }}" width="1200" height="1600" alt="Дети участвуют в творческом занятии" loading="lazy">
+          <div>
+            <span>{{ card.icon }}</span>
+            <h3>{{ card.title }}</h3>
+            <p>{{ card.description }}</p>
+          </div>
+        </article>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
   <section class="sc-section sc-trust" aria-labelledby="summer-camp-trust-title">
     <div class="container">
       <div class="sc-section__intro sc-section__intro--center" data-reveal>
@@ -58,6 +80,20 @@ layout: default
           <h3>{{ item.title }}</h3>
           <p>{{ item.description }}</p>
         </article>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  <section class="sc-section sc-gallery" aria-labelledby="summer-camp-gallery-title">
+    <div class="container">
+      <div class="sc-section__intro" data-reveal>
+        <p class="sc-eyebrow">{{ siteContent.summer_camp_2026.gallery.eyebrow }}</p>
+        <h2 id="summer-camp-gallery-title">{{ siteContent.summer_camp_2026.gallery.title }}</h2>
+      </div>
+      <div class="sc-image-rail" data-reveal>
+        {% for img in siteContent.summer_camp_2026.gallery.images %}
+        <img src="{{ img | url }}" width="1200" height="1600" alt="Участники летней смены">
         {% endfor %}
       </div>
     </div>
@@ -87,42 +123,6 @@ layout: default
             {% endfor %}
           </ul>
         </article>
-      </div>
-    </div>
-  </section>
-
-  <section class="sc-section sc-program" id="summer-camp-program" aria-labelledby="summer-camp-program-title">
-    <div class="container">
-      <div class="sc-section__intro sc-section__intro--center" data-reveal>
-        <p class="sc-eyebrow">{{ siteContent.summer_camp_2026.program.eyebrow }}</p>
-        <h2 id="summer-camp-program-title">{{ siteContent.summer_camp_2026.program.title }}</h2>
-        <p>{{ siteContent.summer_camp_2026.program.lead }}</p>
-      </div>
-      <div class="sc-program__grid">
-        {% for card in siteContent.summer_camp_2026.program.cards %}
-        <article class="sc-program-card sc-interactive-card" data-reveal>
-          <img src="{{ card.image | url }}" width="1200" height="1600" alt="Дети участвуют в творческом занятии" loading="lazy">
-          <div>
-            <span>{{ card.icon }}</span>
-            <h3>{{ card.title }}</h3>
-            <p>{{ card.description }}</p>
-          </div>
-        </article>
-        {% endfor %}
-      </div>
-    </div>
-  </section>
-
-  <section class="sc-section sc-gallery" aria-labelledby="summer-camp-gallery-title">
-    <div class="container">
-      <div class="sc-section__intro" data-reveal>
-        <p class="sc-eyebrow">{{ siteContent.summer_camp_2026.gallery.eyebrow }}</p>
-        <h2 id="summer-camp-gallery-title">{{ siteContent.summer_camp_2026.gallery.title }}</h2>
-      </div>
-      <div class="sc-image-rail" data-reveal>
-        {% for img in siteContent.summer_camp_2026.gallery.images %}
-        <img src="{{ img | url }}" width="1200" height="1600" alt="Участники летней смены">
-        {% endfor %}
       </div>
     </div>
   </section>

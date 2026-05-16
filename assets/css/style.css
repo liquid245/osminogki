@@ -773,7 +773,7 @@ body {
   width: fit-content;
   margin-bottom: 1rem;
   color: #6f7a63;
-  font-size: 0.78rem;
+  font-size: 1.092rem;
   font-weight: 950;
   letter-spacing: 0.14em;
   text-transform: uppercase;
@@ -809,6 +809,10 @@ body {
   font-size: clamp(1.1rem, 2vw, 1.35rem);
   line-height: 1.65;
   white-space: pre-line;
+}
+
+.sc-hero__lead::first-line {
+  font-weight: 700;
 }
 
 .sc-hero__actions,
@@ -1830,6 +1834,7 @@ body {
   }
 
   .sc-hero__visual {
+    order: -1;
     min-height: 400px;
     transform: none;
   }

@@ -123,4 +123,17 @@ document.addEventListener('DOMContentLoaded', () => {
     progressBar.style.width = `${Math.min(scrollPercent, 100)}%`;
     progressBar.setAttribute('aria-valuenow', Math.round(Math.min(scrollPercent, 100)));
   }
+
+  const placesEl = document.querySelector('[data-dynamic="places-left"]');
+  if (placesEl) {
+    const key = 'osminogki_places_left';
+    let places = parseInt(localStorage.getItem(key), 10);
+    if (isNaN(places)) {
+      places = 15;
+    } else {
+      places = Math.max(places - 1, 3);
+    }
+    localStorage.setItem(key, places);
+    placesEl.textContent = places;
+  }
 });

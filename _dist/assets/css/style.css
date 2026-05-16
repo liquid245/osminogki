@@ -808,6 +808,7 @@ body {
   color: #4e5b48;
   font-size: clamp(1.1rem, 2vw, 1.35rem);
   line-height: 1.65;
+  white-space: pre-line;
 }
 
 .sc-hero__actions,
@@ -1097,11 +1098,19 @@ body {
   border-radius: 24px;
 }
 
-.sc-story__cards article:hover,
-.sc-faq details:hover,
+@media (hover: hover) {
+  .sc-story__cards article:hover,
+  .sc-faq details:hover,
+  .sc-hero__metrics div:hover,
+  .sc-glass-note:hover {
+    transform: translateY(-8px) scale(1.025);
+    border-color: rgba(255, 122, 26, 0.24);
+    box-shadow: var(--sc-shadow-strong);
+  }
+}
+
 .sc-hero__metrics div:hover,
 .sc-glass-note:hover {
-  transform: translateY(-8px) scale(1.025);
   border-color: rgba(255, 122, 26, 0.24);
   box-shadow: var(--sc-shadow-strong);
 }
@@ -1362,7 +1371,16 @@ body {
 }
 
 .sc-faq__items--two-col {
+  display: grid;
   grid-template-columns: 1fr 1fr;
+  gap: 0.85rem;
+  align-items: start;
+}
+
+.faq-column {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
 }
 
 @media (max-width: 640px) {
@@ -1497,6 +1515,14 @@ body {
     grid-template-columns: 1fr;
   }
 
+  .sc-hero__content {
+    display: contents;
+  }
+
+  .sc-hero__content-top { order: 1; }
+  .sc-hero__content-bottom { order: 2; }
+  .sc-hero__visual { order: 3; }
+
   .sc-hero__visual {
     min-height: 560px;
     max-width: 620px;
@@ -1544,13 +1570,28 @@ body {
     font-size: clamp(2.7rem, 15vw, 4.2rem);
   }
 
-  .sc-hero__actions,
+  .sc-hero__lead {
+    margin-bottom: 0;
+  }
+
+  .sc-hero__grid {
+    gap: 1rem;
+  }
+
   .sc-button {
     width: 100%;
   }
 
+  .sc-hero__actions {
+    flex-direction: row;
+  }
+
+  .sc-hero__actions .sc-button {
+    flex: 1;
+  }
+
   .sc-hero__metrics {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(3, 1fr);
   }
 
   .sc-hero__visual {
@@ -1608,15 +1649,39 @@ body {
   right: max(1.25rem, env(safe-area-inset-right));
   bottom: max(1.25rem, env(safe-area-inset-bottom));
   z-index: 120;
-  display: grid;
-  grid-template-columns: repeat(2, max-content);
-  gap: 0.7rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
   padding: 0.55rem;
   border: 1px solid rgba(20, 33, 24, 0.12);
   border-radius: 999px;
   background: rgba(255, 248, 235, 0.82);
   box-shadow: 0 22px 62px rgba(41, 31, 9, 0.24);
   backdrop-filter: blur(18px);
+}
+
+.sc-sticky-spacer {
+  flex: 1;
+}
+
+.sc-icon-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 50%;
+  border: 1px solid rgba(20, 33, 24, 0.12);
+  background: rgba(255, 255, 255, 0.78);
+  box-shadow: 0 12px 30px rgba(62, 42, 8, 0.12);
+  transition: transform 180ms ease, box-shadow 180ms ease;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.sc-icon-btn:hover {
+  transform: scale(1.08);
+  box-shadow: var(--sc-shadow-strong);
 }
 
 .sc-sticky-actions .sc-button {
@@ -1639,6 +1704,7 @@ body {
     position: relative;
     z-index: 2;
     max-width: calc(100% - 4rem);
+    white-space: nowrap;
   }
 
   .site-header--summer-camp .nav-links {
@@ -1723,13 +1789,8 @@ body {
 }
 
 @media (max-width: 640px) {
-  .site-header--summer-camp,
   .sc-page,
-  .sc-page__surface,
-  .sc-hero,
-  .sc-hero__grid,
-  .sc-hero__content,
-  .sc-hero__visual {
+  .sc-page__surface {
     max-width: 100%;
     min-width: 0;
     overflow-x: clip;
@@ -1737,6 +1798,10 @@ body {
 
   .sc-page .container {
     width: min(100% - 24px, 1180px);
+  }
+
+  .site-header--summer-camp .logo {
+    font-size: clamp(1rem, 6vw, 1.5rem);
   }
 
   .sc-hero {
@@ -1802,14 +1867,31 @@ body {
     left: max(0.75rem, env(safe-area-inset-left));
     right: max(0.75rem, env(safe-area-inset-right));
     bottom: max(0.75rem, env(safe-area-inset-bottom));
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    flex-wrap: nowrap;
     border-radius: 28px;
+    padding: 0.45rem;
+    gap: 0.35rem;
+  }
+
+  .sc-icon-btn {
+    width: 2.25rem;
+    height: 2.25rem;
+  }
+
+  .sc-icon-btn svg {
+    width: 1.2rem;
+    height: 1.2rem;
   }
 
   .sc-sticky-actions .sc-button {
-    width: 100%;
-    min-height: 46px;
+    flex: 1;
+    min-width: 0;
+    min-height: 40px;
     padding-inline: 0.7rem;
-    font-size: 0.92rem;
+    font-size: 0.9rem;
+  }
+
+  .sc-sticky-spacer {
+    display: none;
   }
 }

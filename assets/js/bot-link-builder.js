@@ -59,7 +59,7 @@ export class BotLinkBuilder {
     return `${this.baseUrl}?start=${this.buildPayload(productId, tariff, utmParams)}`;
   }
 
-  updateBotLinks(selector = 'a[href*="t.me"][data-product-id][data-tariff]') {
+  updateBotLinks(selector = 'a[href*="t.me"][data-product-id]') {
     const links = document.querySelectorAll(selector);
     const pageProductId = document.body.dataset.productId || PRODUCT_IDS_BY_PATH[window.location.pathname];
     const utmHandler = window.utmHandler;
@@ -71,8 +71,15 @@ export class BotLinkBuilder {
     links.forEach(link => {
       const productId = link.dataset.productId || pageProductId;
       const tariff = link.dataset.tariff || null;
+      const mode = link.dataset.mode || null;
       if (productId) {
-        link.href = this.buildLink(productId, tariff, utmParams);
+        if (mode === 'faq') {
+          link.href = `${this.baseUrl}?start=${productId}_faq`;
+        } else if (mode === 'reg') {
+          link.href = `${this.baseUrl}?start=${productId}_reg`;
+        } else {
+          link.href = this.buildLink(productId, tariff, utmParams);
+        }
       }
     });
   }

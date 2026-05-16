@@ -811,54 +811,6 @@ body {
   white-space: pre-line;
 }
 
-.sc-hero__lead::first-line {
-  font-weight: 700;
-}
-
-.sc-hero__lead-wrapper {
-  position: relative;
-}
-
-.sc-hero__lead {
-  transition: max-height 0.35s ease;
-}
-
-.sc-hero__lead.is-collapsed {
-  max-height: 3.6em;
-  overflow: hidden;
-  -webkit-mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
-  mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
-}
-
-.sc-lead-toggle {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-  margin-top: 0.25rem;
-  padding: 0;
-  border: none;
-  background: none;
-  color: #6f7a63;
-  font-size: 0.85rem;
-  font-weight: 700;
-  letter-spacing: 0.04em;
-  cursor: pointer;
-  transition: color 0.2s;
-}
-
-.sc-lead-toggle:hover {
-  color: #4e5b48;
-}
-
-.sc-lead-toggle.is-expanded .sc-lead-toggle__icon {
-  transform: rotate(180deg);
-}
-
-.sc-lead-toggle__icon {
-  transition: transform 0.25s ease;
-  flex-shrink: 0;
-}
-
 .sc-hero__actions,
 .sc-final__card .sc-button,
 .sc-faq .sc-button {
@@ -1620,10 +1572,6 @@ body {
 
   .sc-hero__lead {
     margin-bottom: 0;
-  }
-
-  .sc-hero__lead.is-collapsed {
-    max-height: 20em;
   }
 
   .sc-hero__content {

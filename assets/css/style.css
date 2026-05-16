@@ -1660,10 +1660,6 @@ body {
   backdrop-filter: blur(18px);
 }
 
-.sc-sticky-spacer {
-  flex: 1;
-}
-
 .sc-icon-btn {
   display: flex;
   align-items: center;
@@ -1671,12 +1667,21 @@ body {
   width: 2.75rem;
   height: 2.75rem;
   border-radius: 50%;
-  border: 1px solid rgba(20, 33, 24, 0.12);
+  overflow: hidden;
+  border: 3px solid rgba(255, 255, 255, 0.6);
   background: rgba(255, 255, 255, 0.78);
   box-shadow: 0 12px 30px rgba(62, 42, 8, 0.12);
   transition: transform 180ms ease, box-shadow 180ms ease;
   text-decoration: none;
   flex-shrink: 0;
+}
+
+.sc-icon-btn img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  transform: scale(1.2);
 }
 
 .sc-icon-btn:hover {
@@ -1891,7 +1896,5 @@ body {
     font-size: 0.9rem;
   }
 
-  .sc-sticky-spacer {
-    display: none;
-  }
+
 }

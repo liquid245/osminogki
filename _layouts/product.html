@@ -183,7 +183,7 @@ layout: default
         {% for item in siteContent.summer_camp_2026.faq.items limit:6 %}
         <details>
           <summary>{{ item.question }}</summary>
-          <p>{{ item.answer }}</p>
+          <p>{{ item.answer | newline_to_br }}</p>
         </details>
         {% endfor %}
         </div>
@@ -191,7 +191,7 @@ layout: default
         {% for item in siteContent.summer_camp_2026.faq.items offset:6 %}
         <details>
           <summary>{{ item.question }}</summary>
-          <p>{{ item.answer }}</p>
+          <p>{{ item.answer | newline_to_br }}</p>
         </details>
         {% endfor %}
         </div>

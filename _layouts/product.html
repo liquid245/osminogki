@@ -180,7 +180,7 @@ layout: default
       </div>
       <div class="sc-faq__items sc-faq__items--two-col" data-reveal>
         <div class="faq-column">
-        {% for item in siteContent.summer_camp_2026.faq.items limit:5 %}
+        {% for item in siteContent.summer_camp_2026.faq.items limit:6 %}
         <details>
           <summary>{{ item.question }}</summary>
           <p>{{ item.answer }}</p>
@@ -188,7 +188,7 @@ layout: default
         {% endfor %}
         </div>
         <div class="faq-column">
-        {% for item in siteContent.summer_camp_2026.faq.items offset:5 %}
+        {% for item in siteContent.summer_camp_2026.faq.items offset:6 %}
         <details>
           <summary>{{ item.question }}</summary>
           <p>{{ item.answer }}</p>

@@ -777,6 +777,7 @@ body {
   font-weight: 950;
   letter-spacing: 0.14em;
   text-transform: uppercase;
+  white-space: nowrap;
 }
 
 .sc-eyebrow::before {
@@ -1841,7 +1842,8 @@ body {
     max-width: 100%;
     grid-template-columns: 1.65rem minmax(0, auto);
     gap: 0.55rem;
-    overflow-wrap: anywhere;
+    white-space: nowrap;
+    font-size: clamp(0.65rem, 2.5vw, 1.092rem);
   }
 
   .sc-eyebrow::before {

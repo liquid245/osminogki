@@ -7,6 +7,25 @@ document.addEventListener('DOMContentLoaded', () => {
   const parallaxItems = document.querySelectorAll('.sc-page [data-parallax-bg], .sc-page [data-parallax-content]');
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+  const logoEl = header?.querySelector('.logo');
+  if (logoEl) {
+    const minPx = 10;
+    const fitLogo = () => {
+      logoEl.style.removeProperty('font-size');
+      const max = parseFloat(getComputedStyle(logoEl).fontSize);
+      if (!max) return;
+      let fs = max;
+      if (logoEl.scrollWidth > logoEl.clientWidth) {
+        while (logoEl.scrollWidth > logoEl.clientWidth && fs > minPx) {
+          fs -= 0.5;
+          logoEl.style.fontSize = fs + 'px';
+        }
+      }
+    };
+    fitLogo();
+    window.addEventListener('resize', fitLogo);
+  }
+
   if (navToggle && navLinks) {
     const setMenuOpen = (isOpen) => {
       header.classList.toggle('is-nav-open', isOpen);

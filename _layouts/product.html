@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-{% if product_id == "summer_camp_2026" %}
+
 <div class="sc-scroll-progress" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
 <div class="sc-page">
 <section class="sc-page__surface" aria-label="Летний клуб Осьминожки">
@@ -204,146 +204,14 @@ layout: default
       <p class="sc-eyebrow">{{ siteContent.summer_camp_2026.final_cta.eyebrow }}</p>
       <h2 id="summer-camp-final-title">{{ siteContent.summer_camp_2026.final_cta.title }}</h2>
       <p>{{ siteContent.summer_camp_2026.final_cta.description }}</p>
-      <a class="sc-button sc-button--primary" href="https://t.me/{{ bot_username | default: 'osminogki_montessori_bot' }}" data-product-id="{{ product_id }}">{{ siteContent.summer_camp_2026.final_cta.cta }}</a>
+      {% include 'button-cta.html', cta_text: siteContent.summer_camp_2026.final_cta.cta %}
     </div>
   </section>
 </section>
 <nav class="sc-sticky-actions" aria-label="Быстрые действия">
-  <a class="sc-icon-btn" href="https://t.me/+79055644863" target="_blank" rel="noopener" aria-label="Telegram">
-    <img src="/assets/images/icons/telegram.png" alt="Telegram" width="22" height="22" style="transform:scale(1.74)">
-  </a>
-  <a class="sc-icon-btn" href="https://wa.me/79055644863" target="_blank" rel="noopener" aria-label="WhatsApp">
-    <img src="/assets/images/icons/whatsapp.png" alt="WhatsApp" width="22" height="22" style="transform:scale(1.26)">
-  </a>
-  <a class="sc-icon-btn" href="https://max.ru/u/f9LHodD0cOLH-4D3p9MZ5-2G3oT3iELixaeTCic1pu9GKzzdjG3Qb8Gvi1I" target="_blank" rel="noopener" aria-label="MAX">
-    <img src="/assets/images/icons/max.png" alt="MAX" width="22" height="22">
-  </a>
   <a class="sc-button sc-button--ghost" href="tel:+79055644863">
     Позвонить
   </a>
-  <a class="sc-button sc-button--primary" href="https://t.me/{{ bot_username | default: 'osminogki_montessori_bot' }}" data-product-id="{{ product_id }}">{{ siteContent.summer_camp_2026.sticky_actions.cta_primary }}</a>
+  {% include 'button-cta.html', cta_text: siteContent.summer_camp_2026.sticky_actions.cta_primary %}
 </nav>
 </div>
-{% else %}
-<section class="block block-hero">
-  <div class="container">
-    {{ content }}
-  </div>
-</section>
-
-<section class="block block-problem">
-  <div class="container">
-    <h2>😔 Знакомая ситуация?</h2>
-    <p>Каждое лето одна и та же история:</p>
-    <ul>
-      <li>📱 <strong>Ребёнок весь день за телефоном</strong> — скучает, но не хочет ничего делать</li>
-      <li>😴 <strong>"Мам, мне нечего делать!"</strong> — вы устали от бесконечных поисков развлечений</li>
-      <li>🏠 <strong>Домашняя рутина</strong> — лето проходит, а ярких воспоминаний нет</li>
-      <li>🤔 <strong>"А куда пойти?"</strong> — кружки по расписанию, а вы хотите свободы</li>
-      <li>💰 <strong>Дорогие курсы</strong> — платите кучу денег, а ребёнок не хочет туда ходить</li>
-    </ul>
-    <p><strong>Результат:</strong> лето пролетает, а ваш ребёнок ничего не узнал и никого не встретил.</p>
-    <h3>✅ Мы знаем решение!</h3>
-    <p>На летних встречах «Осьминожки» ваш ребёнок:</p>
-    <ul>
-      <li>🔥 <strong>Сами просится утром</strong> — потому что там интересно!</li>
-      <li>🎯 <strong>Развивается играючи</strong> — без скучных уроков</li>
-      <li>👥 <strong>Находит настоящих друзей</strong> — на всю жизнь</li>
-      <li>🌟 <strong>Возвращается с горящими глазами</strong> — с кучей историй</li>
-    </ul>
-  </div>
-</section>
-
-<section class="block block-solution">
-  <div class="container">
-    <h2>🎯 Что делает наши встречи особенными?</h2>
-    <h3>🎨 Творческие мастерские</h3>
-    <ul>
-      <li><strong>Живопись и графика</strong> — профессиональные художники-наставники</li>
-      <li><strong>Лепка и керамика</strong> — собственные шедевры домой</li>
-      <li><strong>Музыкальная студия</strong> — запись треков и создание музыки</li>
-      <li><strong>Фотография и видеомонтаж</strong> — современные навыки</li>
-    </ul>
-    <h3>🏃 Спорт и активность</h3>
-    <ul>
-      <li><strong>Командные игры</strong> — футбол, баскетбол, волейбол</li>
-      <li><strong>Туризм и походы</strong> — навыки выживания и природа</li>
-      <li><strong>Йога и фитнес</strong> — здоровое тело с ранних лет</li>
-      <li><strong>Велопрогулки</strong> — исследуем окрестности</li>
-    </ul>
-    <h3>🤖 Технологии будущего</h3>
-    <ul>
-      <li><strong>Робототехника</strong> — собираем и запускаем роботов</li>
-      <li><strong>Цифровое творчество</strong> — Scratch, Python, создание игр</li>
-      <li><strong>3D-моделирование</strong> — от идеи до готовой модели</li>
-      <li><strong>VR и AR</strong> — виртуальные приключения</li>
-    </ul>
-  </div>
-</section>
-
-<section class="block block-pricing">
-  <div class="container">
-    <h2>💰 Выберите идеальный пакет</h2>
-    <div class="pricing-options">
-      <div class="pricing-option">
-        <h3>🌟 Одна неделя</h3>
-        <div class="price">12 500 ₽</div>
-        <p>5 дней полного погружения</p>
-        <ul>
-          <li>🍽️ Обеды и полдники</li>
-          <li>🎨 Все творческие материалы</li>
-          <li>🏃 Спортивные мероприятия</li>
-          <li>👨‍🏫 Занятия с наставниками</li>
-          <li>📸 Фотосессия и видеорепортаж</li>
-        </ul>
-        <a href="https://t.me/osminogki_montessori_bot">Забронировать место</a>
-      </div>
-      <div class="pricing-option">
-        <h3>🚀 Две недели</h3>
-        <div class="price">22 500 ₽</div>
-        <p>10 дней максимального развития</p>
-        <ul>
-          <li>🌟 Всё из первой недели</li>
-          <li>⏰ Дополнительные 5 дней</li>
-          <li>👤 Индивидуальные занятия (3 часа)</li>
-          <li>🚐 Трансфер (за дополнительную плату)</li>
-          <li>🎁 Персональный набор материалов</li>
-          <li>📱 Индивидуальный ментор</li>
-          <li>🏆 Сертификат участника</li>
-        </ul>
-        <a href="https://t.me/osminogki_montessori_bot">Забронировать место</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="block block-reviews">
-  <div class="container">
-    <h2>⭐ Отзывы родителей и детей</h2>
-    <blockquote>
-      <p>"Мой сын вернулся из клуба с горящими глазами! Теперь хочет только туда. Освоил Scratch и Python, нашёл настоящих друзей. Спасибо за волшебное лето!"</p>
-      <cite>— Анна М., мама Артёма (12 лет)</cite>
-    </blockquote>
-    <blockquote>
-      <p>"Отличная организация, профессиональные наставники. Дочь прошла от стеснительной девочки до уверенной лидерской команды. Рекомендую всем!"</p>
-      <cite>— Сергей К., папа Маши (10 лет)</cite>
-    </blockquote>
-    <blockquote>
-      <p>"Дочь нашла новых друзей и научилась рисовать. Теперь дома постоянно творит! Уже записываемся на следующий год."</p>
-      <cite>— Елена П., мама Софии (9 лет)</cite>
-    </blockquote>
-  </div>
-</section>
-
-<section class="block block-faq">
-  <div class="container">
-    <h2>❓ Часто задаваемые вопросы</h2>
-    {% for item in siteContent.summer_camp_2026.faq.items %}
-    <details>
-      <summary>{{ item.question }}</summary>
-      <p>{{ item.answer }}</p>
-    </details>
-    {% endfor %}
-  </div>
-</section>
-{% endif %}

@@ -4,10 +4,12 @@
   "description": "Сайт летнего клуба на 11ty",
   "main": ".eleventy.js",
   "scripts": {
+    "images": "node scripts/optimize-images.mjs",
+    "prebuild": "node scripts/optimize-images.mjs",
     "build": "eleventy",
-    "serve": "eleventy --serve",
-    "start": "eleventy --serve",
-    "watch": "eleventy --watch",
+    "serve": "npm run images && eleventy --serve",
+    "start": "npm run images && eleventy --serve",
+    "watch": "npm run images && eleventy --watch",
     "test:e2e": "npx playwright test",
     "test:e2e:headed": "npx playwright test --headed"
   },
@@ -22,7 +24,8 @@
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1",
     "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
-    "@playwright/test": "^1.56.1"
+    "@playwright/test": "^1.56.1",
+    "sharp": "^0.34.5"
   },
   "dependencies": {
     "gray-matter": "^4.0.3"

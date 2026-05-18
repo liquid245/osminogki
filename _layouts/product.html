@@ -29,13 +29,22 @@ layout: default
 
       <div class="sc-hero__visual" aria-label="Фотографии атмосферы клуба «Осьминожки»" data-reveal data-parallax-content data-parallax-speed="0.16">
         <div class="sc-photo-card sc-photo-card--main">
-          <img src="{{ siteContent.summer_camp_2026.hero.images.main.src | url }}" width="1200" height="1600" alt="Дети в летнем клубе «Осьминожки» во время активности" fetchpriority="high">
+          <picture>
+            <source srcset="{{ siteContent.summer_camp_2026.hero.images.main.src | replace: '.jpg', '.webp' | url }}" type="image/webp">
+            <img src="{{ siteContent.summer_camp_2026.hero.images.main.src | url }}" width="1200" height="1600" alt="Дети в летнем клубе «Осьминожки» во время активности" fetchpriority="high">
+          </picture>
         </div>
         <div class="sc-photo-card sc-photo-card--small sc-photo-card--top">
-          <img src="{{ siteContent.summer_camp_2026.hero.images.small_top.src | url }}" width="1200" height="1600" alt="Командная атмосфера летнего клуба «Осьминожки»">
+          <picture>
+            <source srcset="{{ siteContent.summer_camp_2026.hero.images.small_top.src | replace: '.jpg', '.webp' | url }}" type="image/webp">
+            <img src="{{ siteContent.summer_camp_2026.hero.images.small_top.src | url }}" width="1200" height="1600" alt="Командная атмосфера летнего клуба «Осьминожки»">
+          </picture>
         </div>
         <div class="sc-photo-card sc-photo-card--small sc-photo-card--bottom">
-          <img src="{{ siteContent.summer_camp_2026.hero.images.small_bottom.src | url }}" width="1200" height="1600" alt="Творческое и игровое пространство для детей">
+          <picture>
+            <source srcset="{{ siteContent.summer_camp_2026.hero.images.small_bottom.src | replace: '.jpg', '.webp' | url }}" type="image/webp">
+            <img src="{{ siteContent.summer_camp_2026.hero.images.small_bottom.src | url }}" width="1200" height="1600" alt="Творческое и игровое пространство для детей">
+          </picture>
         </div>
 
       </div>
@@ -52,7 +61,10 @@ layout: default
       <div class="sc-program__grid">
         {% for card in siteContent.summer_camp_2026.program.cards %}
         <article class="sc-program-card sc-interactive-card" data-reveal>
-          <img src="{{ card.image | url }}" width="1200" height="1600" alt="Дети участвуют в творческом занятии" loading="lazy">
+          <picture>
+            <source srcset="{{ card.image | replace: '.jpg', '.webp' | url }}" type="image/webp">
+            <img src="{{ card.image | url }}" width="1200" height="1600" alt="Дети участвуют в творческом занятии" loading="lazy">
+          </picture>
           <div>
             <span>{{ card.icon }}</span>
             <h3>{{ card.title }}</h3>
@@ -93,7 +105,10 @@ layout: default
       </div>
       <div class="sc-image-rail" data-reveal>
         {% for img in siteContent.summer_camp_2026.gallery.images %}
-        <img src="{{ img | url }}" width="1200" height="1600" alt="Участники летней смены">
+        <picture>
+          <source srcset="{{ img | replace: '.jpg', '.webp' | url }}" type="image/webp">
+          <img src="{{ img | url }}" width="1200" height="1600" alt="Участники летней смены">
+        </picture>
         {% endfor %}
       </div>
     </div>

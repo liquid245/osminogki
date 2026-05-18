@@ -13,13 +13,13 @@
       ],
       "images": {
         "small_top": {
-          "src": "/assets/images/IMG_9959.JPG"
+          "src": "/assets/images/hero/hero-small-top.jpg"
         },
         "main": {
-          "src": "/assets/images/WhatsApp Image 2026-04-20 at 08.46.20 (1).jpeg"
+          "src": "/assets/images/hero/hero-main.jpg"
         },
         "small_bottom": {
-          "src": "/assets/images/WhatsApp Image 2026-04-20 at 08.46.19.jpeg"
+          "src": "/assets/images/hero/hero-creative-space.jpg"
         }
       }
     },
@@ -58,19 +58,19 @@
           "icon": "Творчество",
           "title": "Мастерские и сцена",
           "description": "Живопись, керамика, театр, музыка и фотоистории — ребёнок создаёт, а не просто смотрит.",
-          "image": "/assets/images/WhatsApp%20Image%202026-04-20%20at%2008.46.21.jpeg"
+          "image": "/assets/images/gallery/crafts-workshop.jpg"
         },
         {
           "icon": "Движение",
           "title": "Спорт и приключения",
           "description": "Командные игры, квесты, прогулки и активность на свежем воздухе без принуждения.",
-          "image": "/assets/images/WhatsApp%20Image%202026-04-20%20at%2008.46.20.jpeg"
+          "image": "/assets/images/gallery/sports-adventure.jpg"
         },
         {
           "icon": "Игра",
           "title": "Квесты и игры",
           "description": "Интеллектуальные игры, квизы, настольные стратегии и командные квесты каждый день.",
-          "image": "/assets/images/IMG_9979.JPG"
+          "image": "/assets/images/gallery/games-quest.jpg"
         }
       ]
     },
@@ -105,10 +105,10 @@
       "eyebrow": "Атмосфера",
       "title": "Фото, которые помогают почувствовать лето",
       "images": [
-        "/assets/images/IMG_9970.JPG",
-        "/assets/images/IMG_9964.JPG",
-        "/assets/images/IMG_9956.JPG",
-        "/assets/images/WhatsApp Image 2026-04-20 at 08.46.20.jpeg"
+        "/assets/images/gallery/gallery-01.jpg",
+        "/assets/images/gallery/gallery-02.jpg",
+        "/assets/images/gallery/gallery-03.jpg",
+        "/assets/images/gallery/sports-adventure.jpg"
       ]
     },
     "pricing": {

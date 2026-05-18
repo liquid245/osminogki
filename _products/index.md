@@ -4,7 +4,7 @@ description: "Летний клуб «Осьминожки» для детей 6
 product_id: "summer_camp_2026"
 bot_username: "osminogki_montessori_bot"
 layout: "product"
-og_image: "/assets/images/summer-camp-og_3.png"
+og_image: "/assets/images/social/og-image.png"
 canonical_url: "https://osminozhki-camp.ru/"
 blocks_order: []
 ---

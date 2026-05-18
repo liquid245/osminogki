@@ -4,7 +4,7 @@
       "eyebrow": "6–12 лет • 8 июня - 3 июля • 3 - 22 августа",
       "title": "Летний Игроград",
       "lead": "Каждый день в Игрограде — это живое общение, командные и подвижные игры, прогулки, творчество, кулинарные мастер-классы и новые впечатления без скуки, перегрузки и бесконечных экранов.",
-      "cta_primary": "Записаться",
+      "cta_primary": "Запись",
       "cta_ghost": "Подробнее о клубе",
       "metrics": [
         { "value": "15", "label": "мест осталось" },
@@ -13,13 +13,13 @@
       ],
       "images": {
         "small_top": {
-          "src": "/assets/images/hero/hero-small-top.jpg"
+          "src": "/assets/images/opt/hero/hero-small-top.jpg"
         },
         "main": {
-          "src": "/assets/images/hero/hero-main.jpg"
+          "src": "/assets/images/opt/hero/hero-main.jpg"
         },
         "small_bottom": {
-          "src": "/assets/images/hero/hero-creative-space.jpg"
+          "src": "/assets/images/opt/hero/hero-creative-space.jpg"
         }
       }
     },
@@ -58,19 +58,19 @@
           "icon": "Творчество",
           "title": "Мастерские и сцена",
           "description": "Живопись, керамика, театр, музыка и фотоистории — ребёнок создаёт, а не просто смотрит.",
-          "image": "/assets/images/gallery/crafts-workshop.jpg"
+          "image": "/assets/images/opt/gallery/crafts-workshop.jpg"
         },
         {
           "icon": "Движение",
           "title": "Спорт и приключения",
           "description": "Командные игры, квесты, прогулки и активность на свежем воздухе без принуждения.",
-          "image": "/assets/images/gallery/sports-adventure.jpg"
+          "image": "/assets/images/opt/gallery/sports-adventure.jpg"
         },
         {
           "icon": "Игра",
           "title": "Квесты и игры",
           "description": "Интеллектуальные игры, квизы, настольные стратегии и командные квесты каждый день.",
-          "image": "/assets/images/gallery/games-quest.jpg"
+          "image": "/assets/images/opt/gallery/games-quest.jpg"
         }
       ]
     },
@@ -105,10 +105,10 @@
       "eyebrow": "Атмосфера",
       "title": "Фото, которые помогают почувствовать лето",
       "images": [
-        "/assets/images/gallery/gallery-01.jpg",
-        "/assets/images/gallery/gallery-02.jpg",
-        "/assets/images/gallery/gallery-03.jpg",
-        "/assets/images/gallery/sports-adventure.jpg"
+        "/assets/images/opt/gallery/gallery-01.jpg",
+        "/assets/images/opt/gallery/gallery-02.jpg",
+        "/assets/images/opt/gallery/gallery-03.jpg",
+        "/assets/images/opt/gallery/sports-adventure.jpg"
       ]
     },
     "pricing": {
@@ -177,19 +177,19 @@
           "text": "«Сын вернулся с горящими глазами. Нашёл друзей и теперь спрашивает, когда следующая неделя».",
           "author": "Анна М.",
           "child": "мама Артёма, 12 лет",
-          "avatar": "/assets/images/avatars/review-01.jpg"
+          "avatar": "/assets/images/opt/avatars/review-01.webp"
         },
         {
           "text": "«Очень сильная организация и наставники. Дочь стала увереннее, и перестала бояться новых компаний».",
           "author": "Сергей К.",
           "child": "папа Маши, 10 лет",
-          "avatar": "/assets/images/avatars/review-02.jpg"
+          "avatar": "/assets/images/opt/avatars/review-02.webp"
         },
         {
           "text": "«Были фото и понятная связь с наставниками. Для родителей это спокойствие, для детей — настоящее лето».",
           "author": "Елена П.",
           "child": "мама Софии, 9 лет",
-          "avatar": "/assets/images/avatars/review-03.jpg"
+          "avatar": "/assets/images/opt/avatars/review-03.webp"
         }
       ]
     },
@@ -255,7 +255,7 @@
     },
     "sticky_actions": {
       "cta_ghost": "Спросить",
-      "cta_primary": "Записаться:&nbsp;&nbsp;"
+      "cta_primary": "Запись:&nbsp;&nbsp;"
     }
   }
 }
